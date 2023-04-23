@@ -57,8 +57,3 @@ function createTableau() {
     table.appendChild(row);
   }
   
-  document.getElementById("set-s").addEventListener("click", (event) => {
-    let s = parseInt(document.getElementById("s").value);
-    createTableau(s);
-});
-  

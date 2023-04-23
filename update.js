@@ -24,6 +24,7 @@ var k = [0,k1,k2,k3,k4]
 
 window.setInterval(function(){
     document.getElementById("result").innerHTML = results
+    s = document.getElementById("stage").value
 },50)
 
 function g(x,y) {
@@ -37,10 +38,6 @@ function Calculate() {
 // x0, y0 = initial conditions
 // h = step size
 // n = number of steps
-
-function SetStage() {
-    s = document.getElementById("stage").value
-}
 
 function RK(f, x0, y0, h, n) {
     let x = x0;
