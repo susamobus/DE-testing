@@ -12,7 +12,10 @@ body {
     border-collapse: collapse;
     border-spacing: 0px;
     border: none;
+    padding: 0px;
+    margin: 0px;
 }
+
 .TableInput {
     width: 40px;
     border: none;
@@ -22,6 +25,11 @@ body {
 }
 
 .TableInput:focus {
+    border: 1px solid black;
+    border-radius: 0px;
+    outline: none;
+}
+#TableInputC:focus {
     border: 1px solid black;
     border-radius: 0px;
     outline: none;
