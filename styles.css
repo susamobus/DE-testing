@@ -4,3 +4,9 @@
     border: 1px solid black;
     border-radius: 4px;
 }
+.TableInput {
+    border: 0px;
+}
+.table tfoot tr{
+    border-top: 1px solid black;
+}

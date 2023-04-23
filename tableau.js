@@ -14,7 +14,7 @@ function CreateTableau() {
             let input = document.createElement("input");
             input.type = "number";
             input.step = "0.01";
-            input.className = "Input";
+            input.className = "TableInput";
             cell.appendChild(input);
             row.appendChild(cell);
           }
@@ -22,7 +22,7 @@ function CreateTableau() {
           let input = document.createElement("input");
           input.type = "number";
           input.step = "0.01";
-          input.className = "Input";
+          input.className = "TableInput";
           cell.appendChild(input);
           row.appendChild(cell);
           table.appendChild(row);
@@ -37,7 +37,7 @@ function CreateTableau() {
           let input = document.createElement("input");
           input.type = "number";
           input.step = "0.01";
-          input.className = "Input";
+          input.className = "TableInput";
           cell.appendChild(input);
           row.appendChild(cell);
         }
