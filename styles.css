@@ -13,11 +13,11 @@ body {
     border: none;
 }
 .TableInput {
-    width: 50px;
+    width: 40px;
     border: none;
     border-radius: 0px;
     font-size: 10px;
-    margin: none;
+    padding: none;
 }
 .TableInput:focus {
     border: 1px solid black;

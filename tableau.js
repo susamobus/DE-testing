@@ -13,6 +13,7 @@ function CreateTableau() {
             let cell = document.createElement("td");
             if (i == 0 && j == 0) {
               let span = document.createElement("span");
+              span.className = "TableInput"
               span.innerHTML = "c1 (0)";
               cell.appendChild(span)
             } else {
