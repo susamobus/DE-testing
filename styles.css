@@ -17,6 +17,7 @@ body {
     border: none;
     border-radius: 0px;
     font-size: 10px;
+    margin: none;
 }
 .TableInput:focus {
     border: 1px solid black;

@@ -11,17 +11,23 @@ function CreateTableau() {
           let row = document.createElement("tr");
           for (let j = 0; j <= i; j++) {
             let cell = document.createElement("td");
-            let input = document.createElement("input");
-            input.type = "number";
-            input.className = "TableInput"
-            if (j == 0) {
-              input.id = "TableInputC"
-              input.placeholder = "c" + i
+            if (i == 0 && j == 0) {
+              let span = document.createElement("span");
+              span.innerHTML = "c1 (0)";
+              cell.appendChild(span)
             } else {
-              input.id = "TableInputA";
-              input.placeholder = "a" + i  + "," + j;
+              let input = document.createElement("input");
+              input.type = "number";
+              input.className = "TableInput";
+              if (j == 0) {
+                input.id = "TableInputC";
+                input.placeholder = "c" + i;
+              } else {
+                input.id = "TableInputA";
+                input.placeholder = "a" + i + "," + j;
+              }
+              cell.appendChild(input)
             }
-            cell.appendChild(input)
             row.appendChild(cell);
           }
           table.appendChild(row);
