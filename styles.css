@@ -22,7 +22,8 @@ body {
     border: none;
     border-radius: 0px;
     font-size: 10px;
-    padding: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 .TableInput:focus {
@@ -59,4 +60,6 @@ body {
     border-bottom: none;
     border-left: none;
     border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
 }
