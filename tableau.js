@@ -1,4 +1,4 @@
-function createTableau() {
+function CreateTableau() {
     let table = document.getElementById("table");
   
     // Create input rows for coefficients
