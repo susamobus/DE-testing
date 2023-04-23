@@ -18,10 +18,9 @@ function CreateTableau() {
               input.placeholder = "c" + i;
               cell.appendChild(input)
               let th = document.createElement("th")
-              th.className = "Thread"
               th.appendChild(cell)
             } else {
-              input.placeholder = "a" + j + i
+              input.placeholder = "a" + j + "," + i
               cell.appendChild(input)
             }
             row.appendChild(cell);
