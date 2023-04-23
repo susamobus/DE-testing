@@ -1,6 +1,12 @@
 var results = 0
 window.setInterval(function(){
     document.getElementById("result").innerHTML = results
+    document.getElementById("k1").innerHTML = k1
+    document.getElementById("k2").innerHTML = k2
+    document.getElementById("k3").innerHTML = k3
+    document.getElementById("k4").innerHTML = k4
+    document.getElementById("i").innerHTML = i
+    document.getElementById("x").innerHTML = x
 },50)
 
 function g(x,y) {
