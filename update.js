@@ -16,7 +16,7 @@ function RK(f, x0, y0, h, n) {
     // h is the step size, and n is the number of steps to take
     let x = x0;
     let y = y0;
-    for (let i = 1; i < n; i++) {
+    for (let i = 1; i <= n; i++) {
       const k1 = f(x, y);
       const k2 = f(x + h / 2, y + h * k1 / 2);
       const k3 = f(x + h / 2, y + h * k2 / 2);
