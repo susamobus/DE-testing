@@ -6,6 +6,23 @@ function CreateTableau() {
         table.removeChild(table.firstChild);
     }
 
+    let col = document.createElement("col")
+    let cell = document.createElement("td")
+    let span = document.createElement("span")
+    span.innerHTML = "c1 (0)"
+    cell.appendChild(text);
+    col.appendChild(cell);
+    for (let i = 1; i < s; i++) {
+      let cell = document.createElement("td");
+      let input = document.createElement("input");
+      input.type = "number";
+      input.className = "TableInputColumn";
+      input.placeholder = "c" + (i + 1);
+      cell.appendChild(input);
+      col.appendChild(cell)
+    }
+    table.appendChild(col)
+
         // Create input rows for coefficients
         for (let i = 0; i <= s; i++) {
           let row = document.createElement("tr");
@@ -21,23 +38,6 @@ function CreateTableau() {
           table.appendChild(row);
         }
       
-        let col = document.createElement("col")
-        let cell = document.createElement("td")
-        let span = document.createElement("span")
-        span.innerHTML = "c1 (0)"
-        cell.appendChild(text);
-        col.appendChild(cell);
-        for (let i = 1; i < s; i++) {
-          let cell = document.createElement("td");
-          let input = document.createElement("input");
-          input.type = "number";
-          input.className = "TableInputColumn";
-          input.placeholder = "c" + (i + 1);
-          cell.appendChild(input);
-          col.appendChild(cell)
-        }
-        table.appendChild(col)
-
         // Create input row 
         let tfoot = document.createElement("tfoot")
         let row = document.createElement("tr");
