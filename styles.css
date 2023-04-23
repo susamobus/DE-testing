@@ -11,6 +11,7 @@
     border: none;
 }
 .TableInput {
+    width: 50px;
     border: none;
 }
 .table tfoot tr{
