@@ -18,6 +18,7 @@ body {
 
 .TableInput {
     width: 40px;
+    height: 20px;
     border: none;
     border-radius: 0px;
     font-size: 10px;
@@ -41,6 +42,7 @@ body {
 
 #TableInputC{
     width: 40px;
+    height: 20px;
     border-bottom: none;
     border-top: none;
     border-left: none;
