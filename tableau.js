@@ -11,7 +11,7 @@ function CreateTableau() {
           let row = document.createElement("tr");
           for (let j = 1; j < i; j++) {
             let cell = document.createElement("td");
-            if (i == 0 && j == 0) {
+            if (i == 1 && j == 1) {
               let input = document.createElement("input");
               input.className = "TableInput";
               input.id = "TableInputC";
@@ -22,7 +22,7 @@ function CreateTableau() {
               let input = document.createElement("input");
               input.type = "text";
               input.className = "TableInput";
-              if (j == 0) {
+              if (j == 1) {
                 input.id = "TableInputC";
                 input.placeholder = "c" + i;
               } else {
