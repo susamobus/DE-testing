@@ -21,7 +21,6 @@ function CreateTableau() {
           table.appendChild(row);
         }
       
-        let colgroup = document.createElement("colgroup")
         let col = document.createElement("col")
         let cell = document.createElement("td")
         let span = document.createElement("span")
@@ -32,13 +31,12 @@ function CreateTableau() {
           let cell = document.createElement("td");
           let input = document.createElement("input");
           input.type = "number";
-          input.className = "TableInput";
+          input.className = "TableInputColumn";
           input.placeholder = "c" + (i + 1);
           cell.appendChild(input);
           col.appendChild(cell)
         }
-        colgroup.appendChild(col)
-        table.appendChild(colgroup)
+        table.appendChild(col)
 
         // Create input row 
         let tfoot = document.createElement("tfoot")

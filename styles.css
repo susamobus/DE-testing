@@ -23,11 +23,23 @@ body {
     border-radius: 0px;
     outline: none;
 }
+.TableInputColumn:focus {
+    border: 1px solid black;
+    border-radius: 0px;
+    outline: none;
+}
+
 
 .table tfoot tr{
     border-top: 1px solid black;
 }
 
-.table colgroup col{
+.TableInputColumn{
+    width: 50px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
     border-right: 1px solid black;
+    border-radius: 0px;
+    font-size: 10px;
 }
