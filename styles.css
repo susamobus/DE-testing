@@ -28,6 +28,6 @@ body {
     border-top: 1px solid black;
 }
 
-.table colgoup col{
+.table colgroup col{
     border-right: 1px solid black;
 }
