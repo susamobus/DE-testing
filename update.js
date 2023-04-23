@@ -8,7 +8,7 @@ function g(x,y) {
 }
 
 function Calculate() {
-    RK(g,0,1,0.1,10)
+    RK(g,0,1,0.01,100)
 }
 
 function RK(f, x0, y0, h, n) {
@@ -18,8 +18,8 @@ function RK(f, x0, y0, h, n) {
     let y = y0;
     for (let i = 1; i < n; i++) {
       const k1 = f(x, y);
-      const k2 = f(x + h / 2, y + (h * k1) / 2);
-      const k3 = f(x + h / 2, y + (h * k2) / 2);
+      const k2 = f(x + h / 2, y + h * k1 / 2);
+      const k3 = f(x + h / 2, y + h * k2 / 2);
       const k4 = f(x + h, y + h * k3);
       y += h * (k1/6 + k2/3 + k3/3 + k4/6);
       x += h;
