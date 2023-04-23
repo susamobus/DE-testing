@@ -15,12 +15,13 @@ function CreateTableau() {
             input.type = "number";
             input.className = "TableInput";
             if (j == 0) {
-              input.placeholder = "c" + (i + 1);
+              input.placeholder = "c" + i;
               cell.appendChild(input)
               let th = document.createElement("th")
               th.className = "Thread"
               th.appendChild(cell)
             } else {
+              input.placeholder = "a" + j + i
               cell.appendChild(input)
             }
             row.appendChild(cell);
