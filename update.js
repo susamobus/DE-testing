@@ -4,7 +4,7 @@ window.setInterval(function(){
 },50)
 
 function f(x,y) {
-    return tan(y)+1
+    return x^2+y^2;
 }
 
 function Calculate() {
