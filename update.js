@@ -3,12 +3,12 @@ window.setInterval(function(){
     document.getElementById("result").innerHTML = results
 },50)
 
-function f(x,y) {
+function g(x,y) {
     return x^2;
 }
 
 function Calculate() {
-    RK(f,0,1,0.1,10)
+    RK(g,0,1,0.1,10)
 }
 
 function RK(f, x0, y0, h, n) {
