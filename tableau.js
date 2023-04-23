@@ -45,7 +45,7 @@ function CreateTableau() {
       
         // Create input row for b values
         row = document.createElement("tr");
-        for (let i = 0; i < s+1; i++) {
+        for (let i = 0; i < s; i++) {
           let cell = document.createElement("td");
           let input = document.createElement("input");
           input.type = "number";
