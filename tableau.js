@@ -28,7 +28,9 @@ function CreateTableau() {
           table.appendChild(row);
         }
       
+
         // Create input row 
+        let tfoot = document.createElement("tfoot")
         let row = document.createElement("tr");
         for (let i = 0; i < s; i++) {
           let cell = document.createElement("td");
@@ -39,6 +41,7 @@ function CreateTableau() {
           cell.appendChild(input);
           row.appendChild(cell);
         }
-        table.appendChild(row)
+        tfoot.appendChild(row)
+        table.appendChild(tfoot)
 
 }
