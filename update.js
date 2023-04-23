@@ -70,7 +70,7 @@ function createTableau(s) {
 
 document.querySelector("form").addEventListener("submit", (event) => {
     event.preventDefault();
-    let s = parseInt(document.getElementById("s").value);
+    let s = parseInt(document.getElementById("stage").value);
     createTableau(s);
 });
 
