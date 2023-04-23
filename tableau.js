@@ -37,7 +37,7 @@ function CreateTableau() {
           col.appendChild(cell)
         }
         th.appendChild(col)
-        table.appendChild(th)
+        table.appendChild(col)
 
         // Create input row 
         let tfoot = document.createElement("tfoot")
