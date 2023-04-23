@@ -25,7 +25,6 @@ function CreateTableau() {
         let col = document.createElement("col")
         let cell = document.createElement("td")
         let text = document.createElement("span")
-        text.innerHTML = "c1 (0)"
         cell.appendChild(text);
         col.appendChild(cell);
         for (let i = 0; i < s; i++) {
