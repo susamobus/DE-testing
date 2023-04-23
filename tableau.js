@@ -14,8 +14,8 @@ function CreateTableau() {
             if (i == 0 && j == 0) {
               let input = document.createElement("input");
               input.className = "TableInput";
-              input.id = "TableInputC"
-              input.disabled = "true"
+              input.id = "TableInputC";
+              input.disabled = "true";
               input.placeholder = "c1 (0)";
               cell.appendChild(input)
             } else {
@@ -41,12 +41,12 @@ function CreateTableau() {
         let row = document.createElement("tr");
         let cell = document.createElement("td")
         let input = document.createElement("input")
-        input.className = "TableInput"
-        input.disbaled = "true"
-        input.id = "TableEmpty"
+        input.className = "TableInput";
+        input.disabled = "true";
+        input.id = "TableInputC";
         cell.appendChild(input)
         row.appendChild(cell)
-        
+
         for (let i = 0; i < s; i++) {
           let cell = document.createElement("td")
           let input = document.createElement("input");
