@@ -21,7 +21,6 @@ function CreateTableau() {
           table.appendChild(row);
         }
       
-        let th = document.createElement("th")
         let col = document.createElement("col")
         let cell = document.createElement("td")
         let text = document.createElement("span")
@@ -36,7 +35,6 @@ function CreateTableau() {
           cell.appendChild(input);
           col.appendChild(cell)
         }
-        th.appendChild(col)
         table.appendChild(col)
 
         // Create input row 
