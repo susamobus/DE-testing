@@ -42,7 +42,7 @@ function SetStage() {
     s = document.getElementById("stage").value
 }
 
-function CreateTableau(s) {
+function CreateTableau() {
     let table = document.getElementById("table");
   
     // Create headers row
