@@ -4,7 +4,7 @@ window.setInterval(function(){
 },50)
 
 function g(x,y) {
-    return 2*x;
+    return x^2;
 }
 
 function Calculate() {
