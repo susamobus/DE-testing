@@ -21,8 +21,13 @@ body {
 .TableInput:focus {
     border: 1px solid black;
     border-radius: 0px;
+    outline: none;
 }
 
 .table tfoot tr{
     border-top: 1px solid black;
+}
+
+.Thread {
+    border-right: 1px solid black;
 }

@@ -14,7 +14,15 @@ function CreateTableau() {
             let input = document.createElement("input");
             input.type = "number";
             input.className = "TableInput";
-            cell.appendChild(input);
+            if (i == 0) {
+              input.placeholder = "c" + (i + 1);
+              cell.appendChild(input)
+              let th = document.createElement("th")
+              th.className = "Thread"
+              th.appendChild(cell)
+            } else {
+              cell.appendChild(input)
+            }
             row.appendChild(cell);
           }
           let cell = document.createElement("td");
