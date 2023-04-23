@@ -5,11 +5,11 @@ function CreateTableau() {
     while (table.hasChildNodes()) {
         table.removeChild(table.firstChild);
     }
-      
-    // Create rows for coefficients
-    for (let i = 0; i < s; i++) {
-        let row = document.createElement("tr");
-        for (let j = 0; j < s; j++) {
+
+        // Create input rows for coefficients
+        for (let i = 0; i < s; i++) {
+          let row = document.createElement("tr");
+          for (let j = 0; j < s; j++) {
             let cell = document.createElement("td");
             let input = document.createElement("input");
             input.type = "number";
@@ -17,18 +17,18 @@ function CreateTableau() {
             input.step = "0.01";
             cell.appendChild(input);
             row.appendChild(cell);
+          }
+          let cell = document.createElement("td");
+          let input = document.createElement("input");
+          input.type = "number";
+          input.min = "0";
+          input.step = "0.01";
+          cell.appendChild(input);
+          row.appendChild(cell);
+          table.appendChild(row);
         }
-        let cell = document.createElement("td");
-        let input = document.createElement("input");
-        input.type = "number";
-        input.min = "0";
-        input.step = "0.01";
-        cell.appendChild(input);
-        row.appendChild(cell);
-        table.appendChild(row);
-    }
       
-        // Create row for additional b value
+        // Create input row for c values
         let row = document.createElement("tr");
         for (let i = 0; i < s; i++) {
           let cell = document.createElement("td");
@@ -40,17 +40,12 @@ function CreateTableau() {
           row.appendChild(cell);
         }
         let cell = document.createElement("td");
-        let input = document.createElement("input");
-        input.type = "number";
-        input.min = "0";
-        input.step = "0.01";
-        cell.appendChild(input);
         row.appendChild(cell);
         table.appendChild(row);
       
-        // Create row for additional c values
+        // Create input row for b values
         row = document.createElement("tr");
-        for (let i = 0; i < s; i++) {
+        for (let i = 0; i < s+1; i++) {
           let cell = document.createElement("td");
           let input = document.createElement("input");
           input.type = "number";
@@ -59,6 +54,5 @@ function CreateTableau() {
           cell.appendChild(input);
           row.appendChild(cell);
         }
-        let cell = document.createElement("td");
         table.appendChild(row);
 }
