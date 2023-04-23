@@ -13,16 +13,16 @@ function CreateTableau() {
             let cell = document.createElement("td");
             let input = document.createElement("input");
             input.type = "number";
-            input.min = "0";
             input.step = "0.01";
+            input.className = "Input";
             cell.appendChild(input);
             row.appendChild(cell);
           }
           let cell = document.createElement("td");
           let input = document.createElement("input");
           input.type = "number";
-          input.min = "0";
           input.step = "0.01";
+          input.className = "Input";
           cell.appendChild(input);
           row.appendChild(cell);
           table.appendChild(row);
@@ -36,8 +36,8 @@ function CreateTableau() {
           let cell = document.createElement("td");
           let input = document.createElement("input");
           input.type = "number";
-          input.min = "0";
           input.step = "0.01";
+          input.className = "Input";
           cell.appendChild(input);
           row.appendChild(cell);
         }
