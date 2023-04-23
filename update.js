@@ -38,8 +38,11 @@ function Calculate() {
 // h = step size
 // n = number of steps
 
+function SetStage() {
+    s = document.getElementById("stage").value
+}
 
-function createTableau(s) {
+function CreateTableau() {
     let table = document.getElementById("table");
 
     // Create headers row
@@ -67,12 +70,6 @@ function createTableau(s) {
       table.appendChild(row);
     }
   }
-
-document.querySelector("form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    let s = parseInt(document.getElementById("stage").value);
-    createTableau(s);
-});
 
 function RK(f, x0, y0, h, n) {
     let x = x0;

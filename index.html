@@ -8,9 +8,11 @@
         <br>
         <form>
             <label for="stage">Number of Stages:</label>
-            <input type="number" id="stage" name="stage" min="1" required><br><br>
+            <input type="number" id="stage" name="stage" min="1" required>
+            <button id="set" onclick="SetStage()">Set value</button>
+            <br><br>
             <table id="table"></table>
-            <button type="submit">Create Tableau</button>
+            <button id="submit" onclick="CreateTableau()">Create Tableau</button>
         </form>
         <button onclick="Calculate()">Calculate</button><br><br>
         <span>Result: <span id="result">loading</span></span>
