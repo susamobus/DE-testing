@@ -37,6 +37,7 @@ function CreateTableau() {
           let input = document.createElement("input");
           input.type = "number";
           input.className = "TableInput";
+          input.placeholder = "b" + (i + 1);
           cell.appendChild(input);
           row.appendChild(cell);
         }

@@ -15,6 +15,7 @@ body {
 .TableInput {
     width: 50px;
     border: none;
+    font-size: 10px;
 }
 .table tfoot tr{
     border-top: 1px solid black;
