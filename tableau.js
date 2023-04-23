@@ -1,5 +1,12 @@
 function CreateTableau() {
+
     let table = document.getElementById("table");
+
+    // Delete previous table
+    while (table.hasChildNodes()) {
+        table.removeChild(table.firstChild);
+    }
+      
   
     // Create input rows for coefficients
     for (let i = 0; i < s; i++) {
