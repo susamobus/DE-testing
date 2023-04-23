@@ -1,5 +1,5 @@
 var results = 0
-var s = 4
+var s = document.getElementById("stage").value
 var c2 = 1/2
 var c3 = 1/2
 var c4 = 1
@@ -46,8 +46,8 @@ function RK(f, x0, y0, h, n) {
     let sum2 = 0;
     for (let i = 0; i < n; i++) {
         for (let j = 1; j <= s; j++) {
-            for (let m = 1; m < j; m++) {
-                sum += a[j][m] * k[m]
+            for (let l = 1; l < j; l++) {
+                sum += a[j][l] * k[l]
             }
             k[j] = f(x + c[j] * h, y + h * sum)
             sum2 += b[j] * k[j]
