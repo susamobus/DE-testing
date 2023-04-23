@@ -8,7 +8,7 @@ function g(x,y) {
 }
 
 function Calculate() {
-    RK(g,0,1,0.01,100)
+    RK(g,0,1,1,1)
 }
 
 function RK(f, x0, y0, h, n) {
