@@ -6,32 +6,21 @@ function CreateTableau() {
         table.removeChild(table.firstChild);
     }
 
-    let col = document.createElement("col")
-    let cell = document.createElement("td")
-    let span = document.createElement("span")
-    span.innerHTML = "c1 (0)"
-    cell.appendChild(text);
-    col.appendChild(cell);
-    for (let i = 1; i < s; i++) {
-      let cell = document.createElement("td");
-      let input = document.createElement("input");
-      input.type = "number";
-      input.className = "TableInputColumn";
-      input.placeholder = "c" + (i + 1);
-      cell.appendChild(input);
-      col.appendChild(cell)
-    }
-    table.appendChild(col)
-
         // Create input rows for coefficients
         for (let i = 0; i <= s; i++) {
           let row = document.createElement("tr");
-          for (let j = 0; j < i; j++) {
+          for (let j = 0; j <= i; j++) {
             let cell = document.createElement("td");
             let input = document.createElement("input");
             input.type = "number";
-            input.className = "TableInput";
-            input.placeholder = "a" + (i + 1)  + "," + (j + 1);
+            input.className = "TableInput"
+            if (j == 0) {
+              input.id = "TableInputC"
+              input.placeholder = "c" + i
+            } else {
+              input.id = "TableInputA";
+              input.placeholder = "a" + i  + "," + j;
+            }
             cell.appendChild(input)
             row.appendChild(cell);
           }
@@ -48,6 +37,7 @@ function CreateTableau() {
           let input = document.createElement("input");
           input.type = "number";
           input.className = "TableInput";
+          input.id = "TableInputB"
           input.placeholder = "b" + (i + 1);
           cell.appendChild(input);
           row.appendChild(cell);
