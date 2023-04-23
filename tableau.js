@@ -9,7 +9,7 @@ function CreateTableau() {
         // Create input rows for coefficients
         for (let i = 1; i <= s; i++) {
           let row = document.createElement("tr");
-          for (let j = 1; j < i; j++) {
+          for (let j = 1; j <= i; j++) {
             let cell = document.createElement("td");
             if (i == 1 && j == 1) {
               let input = document.createElement("input");
