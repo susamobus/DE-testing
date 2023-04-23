@@ -1,5 +1,5 @@
 var results = 0
-var s = document.getElementById("stage").value
+var s = 4
 var c2 = 1/2
 var c3 = 1/2
 var c4 = 1
@@ -38,6 +38,41 @@ function Calculate() {
 // h = step size
 // n = number of steps
 
+
+function createTableau(s) {
+    let table = document.getElementById("table");
+
+    // Create headers row
+    let headers = ["c", "a", "b"];
+    let headersRow = document.createElement("tr");
+    for (let h of headers) {
+      let header = document.createElement("th");
+      header.textContent = h;
+      headersRow.appendChild(header);
+    }
+    table.appendChild(headersRow);
+
+    // Create input rows for coefficients
+    for (let i2 = 1; i2 <= s; i2++) {
+      let row = document.createElement("tr");
+      for (let j2 = 1; j2 <= 3; j2++) {
+        let cell = document.createElement("td");
+        let input = document.createElement("input");
+        input.type = "number";
+        input.min = "0";
+        input.step = "0.01";
+        cell.appendChild(input);
+        row.appendChild(cell);
+      }
+      table.appendChild(row);
+    }
+  }
+
+document.querySelector("form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    let s = parseInt(document.getElementById("s").value);
+    createTableau(s);
+});
 
 function RK(f, x0, y0, h, n) {
     let x = x0;
