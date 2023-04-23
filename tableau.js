@@ -21,12 +21,14 @@ function CreateTableau() {
           table.appendChild(row);
         }
       
+        let colgroup = document.createElement("colgroup")
         let col = document.createElement("col")
         let cell = document.createElement("td")
-        let text = document.createElement("span")
+        let span = document.createElement("span")
+        span.innerHTML = "c1 (0)"
         cell.appendChild(text);
         col.appendChild(cell);
-        for (let i = 0; i < s; i++) {
+        for (let i = 1; i < s; i++) {
           let cell = document.createElement("td");
           let input = document.createElement("input");
           input.type = "number";
@@ -35,7 +37,8 @@ function CreateTableau() {
           cell.appendChild(input);
           col.appendChild(cell)
         }
-        table.appendChild(col)
+        colgroup.appendChild(col)
+        table.appendChild(colgroup)
 
         // Create input row 
         let tfoot = document.createElement("tfoot")
