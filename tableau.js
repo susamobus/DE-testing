@@ -71,8 +71,9 @@ function UpdateTableau() {
   c = [0,0];
   for (i = 1; i <= s; i++) {
     b.push(0)
+    let ai = [0]
     if (i > 1) {
-      a.push([0])
+      a.push(ai)
       c.push(0)
       for (j = 1; j < s; j++) {
         a[i].push(0)
