@@ -1,5 +1,4 @@
 function CreateTableau() {
-
     let table = document.getElementById("table");
 
     // Delete previous table
@@ -62,9 +61,4 @@ function CreateTableau() {
         }
         let cell = document.createElement("td");
         table.appendChild(row);
-      
-        // Add empty cell in bottom left corner
-        let emptyCell = document.createElement("td");
-        let lastRow = table.rows[table.rows.length - 1];
-        lastRow.insertBefore(emptyCell, lastRow.cells[0]);
 }
