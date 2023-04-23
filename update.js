@@ -4,7 +4,7 @@ window.setInterval(function(){
 },50)
 
 function f(x,y) {
-    return x^2+y^2;
+    return x^2;
 }
 
 function Calculate() {
