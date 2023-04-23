@@ -42,23 +42,46 @@ function SetStage() {
     s = document.getElementById("stage").value
 }
 
-function CreateTableau() {
+function CreateTableau(s) {
     let table = document.getElementById("table");
-
+  
     // Create headers row
-    let headers = ["c", "a", "b"];
     let headersRow = document.createElement("tr");
-    for (let h of headers) {
+  
+    // Create empty cell for top-left corner
+    headersRow.appendChild(document.createElement("th"));
+  
+    // Create headers for a values (top row)
+    for (let i = 1; i <= s; i++) {
       let header = document.createElement("th");
-      header.textContent = h;
+      header.textContent = "a" + i;
       headersRow.appendChild(header);
     }
+  
+    // Create header for c values
+    let cHeader = document.createElement("th");
+    cHeader.textContent = "c";
+    headersRow.appendChild(cHeader);
+  
     table.appendChild(headersRow);
-
+  
     // Create input rows for coefficients
-    for (let i2 = 1; i2 <= s; i2++) {
+    for (let i = 1; i <= s + 1; i++) {
       let row = document.createElement("tr");
-      for (let j2 = 1; j2 <= 3; j2++) {
+  
+      // Create header for b values (left column)
+      if (i === s + 1) {
+        let bHeader = document.createElement("th");
+        bHeader.textContent = "b";
+        row.appendChild(bHeader);
+      } else {
+        let stageHeader = document.createElement("th");
+        stageHeader.textContent = "Stage " + i;
+        row.appendChild(stageHeader);
+      }
+  
+      // Create input fields for a values
+      for (let j = 1; j <= s; j++) {
         let cell = document.createElement("td");
         let input = document.createElement("input");
         input.type = "number";
@@ -67,9 +90,26 @@ function CreateTableau() {
         cell.appendChild(input);
         row.appendChild(cell);
       }
+  
+      // Create input field for c value
+      if (i === s + 1) {
+        let cCell = document.createElement("td");
+        let cInput = document.createElement("input");
+        cInput.type = "number";
+        cInput.min = "0";
+        cInput.step = "0.01";
+        cCell.appendChild(cInput);
+        row.appendChild(cCell);
+      } else {
+        let cCell = document.createElement("td");
+        cCell.textContent = "";
+        row.appendChild(cCell);
+      }
+  
       table.appendChild(row);
     }
   }
+  
 
 function RK(f, x0, y0, h, n) {
     let x = x0;
