@@ -28,7 +28,7 @@ function CreateTableau() {
                 input.placeholder = "c" + i;
               } else {
                 input.id = "TableInputA";
-                input.name = "a" + i + "," + j
+                input.name = "a" + i + "," + j;
                 input.placeholder = "a" + i + "," + j;
               }
               cell.appendChild(input)
@@ -72,7 +72,7 @@ function UpdateTableau() {
   for (i = 1; i <= s; i++) {
     b.push(0)
     if (i > 1) {
-      a.push(0)
+      a.push([0])
       c.push(0)
       for (j = 1; j < s; j++) {
         a[i].push(0)
