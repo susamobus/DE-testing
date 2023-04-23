@@ -11,6 +11,7 @@ body {
 .table {
     border-collapse: collapse;
     border: none;
+    padding: none;
 }
 .TableInput {
     width: 40px;
@@ -19,6 +20,7 @@ body {
     font-size: 10px;
     padding: none;
 }
+
 .TableInput:focus {
     border: 1px solid black;
     border-radius: 0px;

@@ -12,10 +12,12 @@ function CreateTableau() {
           for (let j = 0; j <= i; j++) {
             let cell = document.createElement("td");
             if (i == 0 && j == 0) {
-              let span = document.createElement("span");
-              span.className = "TableInput"
-              span.innerHTML = "c1 (0)";
-              cell.appendChild(span)
+              let input = document.createElement("input");
+              input.className = "TableInput";
+              input.id = "TableInputC"
+              input.disabled = "true"
+              input.placeholder = "c1 (0)";
+              cell.appendChild(input)
             } else {
               let input = document.createElement("input");
               input.type = "number";
