@@ -7,7 +7,7 @@ function CreateTableau() {
     }
 
         // Create input rows for coefficients
-        for (let i = 0; i < s; i++) {
+        for (let i = 1; i <= s; i++) {
           let row = document.createElement("tr");
           for (let j = 0; j <= i; j++) {
             let cell = document.createElement("td");
@@ -40,9 +40,13 @@ function CreateTableau() {
         let tfoot = document.createElement("tfoot")
         let row = document.createElement("tr");
         let cell = document.createElement("td")
-        cell.className = "TableEmpty";
+        let input = document.createElement("input")
+        input.className = "TableInput"
+        input.disbaled = "true"
+        input.id = "TableEmpty"
+        cell.appendChild(input)
         row.appendChild(cell)
-
+        
         for (let i = 0; i < s; i++) {
           let cell = document.createElement("td")
           let input = document.createElement("input");
