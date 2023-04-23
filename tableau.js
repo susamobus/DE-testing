@@ -67,6 +67,4 @@ function CreateTableau() {
         let emptyCell = document.createElement("td");
         let lastRow = table.rows[table.rows.length - 1];
         lastRow.insertBefore(emptyCell, lastRow.cells[0]);
-
-        document.body.appendChild(table);
 }
