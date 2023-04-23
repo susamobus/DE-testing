@@ -14,7 +14,7 @@ window.setInterval(function(){
 },50)
 
 function g(x,y) {
-    return x^2;
+    return x*x;
 }
 
 function Calculate() {
