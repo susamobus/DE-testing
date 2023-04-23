@@ -30,8 +30,10 @@ function CreateTableau() {
         // Create input row 
         let tfoot = document.createElement("tfoot")
         let row = document.createElement("tr");
+        let cell = document.createElement("td")
+        row.append(cell)
         for (let i = 0; i < s; i++) {
-          let cell = document.createElement("td");
+          let cell = document.createElement("td")
           let input = document.createElement("input");
           input.type = "number";
           input.className = "TableInput";
