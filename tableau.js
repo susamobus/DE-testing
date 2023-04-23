@@ -28,7 +28,7 @@ function CreateTableau() {
           table.appendChild(row);
         }
       
-        // Create input row for c values
+        // Create input row 
         let row = document.createElement("tr");
         for (let i = 0; i < s; i++) {
           let cell = document.createElement("td");
@@ -40,17 +40,5 @@ function CreateTableau() {
           row.appendChild(cell);
         }
         table.appendChild(row)
-        
-        // Create input row for b values
-        row = document.createElement("tr");
-        for (let i = 0; i < s; i++) {
-          let cell = document.createElement("td");
-          let input = document.createElement("input");
-          input.type = "number";
-          input.min = "0";
-          input.step = "0.01";
-          cell.appendChild(input);
-          row.appendChild(cell);
-        }
-        table.appendChild(row)
+
 }
