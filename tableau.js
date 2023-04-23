@@ -14,26 +14,37 @@ function CreateTableau() {
             let input = document.createElement("input");
             input.type = "number";
             input.className = "TableInput";
-            if (j == 0) {
-              input.placeholder = "c" + i;
-              cell.appendChild(input)
-              let th = document.createElement("th")
-              th.appendChild(cell)
-            } else {
-              input.placeholder = "a" + j + "," + i
-              cell.appendChild(input)
-            }
+            input.placeholder = "a" + (i + 1)  + "," + (j + 1);
+            cell.appendChild(input)
             row.appendChild(cell);
           }
           table.appendChild(row);
         }
       
+        let th = document.createElement("th")
+        let col = document.createElement("col")
+        let cell = document.createElement("td")
+        let text = document.createElement("span")
+        text.innerHTML = "c1 (0)"
+        cell.appendChild(text);
+        col.appendChild(cell);
+        for (let i = 0; i < s; i++) {
+          let cell = document.createElement("td");
+          let input = document.createElement("input");
+          input.type = "number";
+          input.className = "TableInput";
+          input.placeholder = "c" + (i + 1);
+          cell.appendChild(input);
+          col.appendChild(cell)
+        }
+        th.appendChild(col)
+        table.appendChild(th)
 
         // Create input row 
         let tfoot = document.createElement("tfoot")
         let row = document.createElement("tr");
         let cell = document.createElement("td")
-        row.append(cell)
+        row.appendChild(cell)
         for (let i = 0; i < s; i++) {
           let cell = document.createElement("td")
           let input = document.createElement("input");
