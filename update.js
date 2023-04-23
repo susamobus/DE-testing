@@ -24,6 +24,6 @@ function RK(f, x0, y0, h, n) {
       y += h * (k1/6 + k2/3 + k3/3 + k4/6);
       x += h;
     }
-    results = x
+    results = k2
 }
   
