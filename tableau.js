@@ -39,10 +39,8 @@ function CreateTableau() {
           cell.appendChild(input);
           row.appendChild(cell);
         }
-        let cell = document.createElement("td");
-        row.appendChild(cell);
-        table.appendChild(row);
-      
+        table.appendChild(row)
+        
         // Create input row for b values
         row = document.createElement("tr");
         for (let i = 0; i < s; i++) {
@@ -54,5 +52,5 @@ function CreateTableau() {
           cell.appendChild(input);
           row.appendChild(cell);
         }
-        table.appendChild(row);
+        table.appendChild(row)
 }
