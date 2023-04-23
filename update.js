@@ -25,6 +25,10 @@ var k = [0,k1,k2,k3,k4]
 window.setInterval(function(){
     document.getElementById("result").innerHTML = results
     s = document.getElementById("stage").value
+    //test
+    document.getElementById("a").innerHTML = a
+    document.getElementById("b").innerHTML = b
+    document.getElementById("c").innerHTML = c
 },50)
 
 function g(x,y) {
