@@ -25,7 +25,7 @@ function RK(f, x0, y0, h, n) {
     let x = x0;
     let y = y0;
     for (let i = 0; i < n; i++) {
-      const k1 = f(x, y);
+      const k1 = g(x, y);
       const k2 = f(x + h / 2, y + h * k1 / 2);
       const k3 = f(x + h / 2, y + h * k2 / 2);
       const k4 = f(x + h, y + h * k3);
