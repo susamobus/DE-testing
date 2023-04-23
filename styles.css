@@ -3,14 +3,15 @@
 .Input {
     border: 1px solid black;
     border-radius: 4px;
+    outline: none;
 }
 
 .table {
     border-collapse: collapse;
-    border: 0px solid white;
+    border: none;
 }
 .TableInput {
-    border: 0px solid white;
+    border: none;
 }
 .table tfoot tr{
     border-top: 1px solid black;
