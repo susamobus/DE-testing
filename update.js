@@ -21,9 +21,10 @@ function RK(f, x0, y0, h, n) {
       const k2 = f(x + h / 2, y + h * k1 / 2);
       const k3 = f(x + h / 2, y + h * k2 / 2);
       const k4 = f(x + h, y + h * k3);
+      results = k2
       y += h * (k1/6 + k2/3 + k3/3 + k4/6);
       x += h;
     }
-    results = k2
+    // here
 }
   
