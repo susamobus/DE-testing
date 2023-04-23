@@ -12,6 +12,7 @@ body {
     border-collapse: collapse;
     border: none;
     padding: none;
+    margin: none;
 }
 .TableInput {
     width: 40px;
@@ -39,4 +40,12 @@ body {
     border-right: 1px solid black;
     border-radius: 0px;
     font-size: 10px;
+}
+
+.TableEmpty {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0px;
 }

@@ -40,7 +40,9 @@ function CreateTableau() {
         let tfoot = document.createElement("tfoot")
         let row = document.createElement("tr");
         let cell = document.createElement("td")
+        cell.class = "TableEmpty";
         row.appendChild(cell)
+
         for (let i = 0; i < s; i++) {
           let cell = document.createElement("td")
           let input = document.createElement("input");
