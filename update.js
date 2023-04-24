@@ -1,13 +1,13 @@
 var results = 0
-var x0;
-var y0;
-var h;
-var n;
-var s;
-var c;
-var b;
-var a;
-var k;
+var x0 = 0;
+var y0 = 0;
+var h = 0;
+var n = 0;
+var s = 0;
+var c = [];
+var b = [];
+var a = [];
+var k = [];
 
 window.setInterval(function(){
     document.getElementById("result").innerHTML = results
