@@ -16,14 +16,14 @@ function CreateTableau() {
           }
           for (let j = 0; j < im; j++) {
             let cell = document.createElement("td");
-            if (i == 1 && j == 0) {
+            if (i == 1 && j == 0 && isImplicit == false) {
               let input = document.createElement("input");
               input.className = "TableInput";
               input.id = "TableInputC";
               input.disabled = "true";
               input.placeholder = "c1 (0)";
               cell.appendChild(input)
-            } else if (i !== 1) {
+            } else if (i !== 1 && isImplicit == false) {
               let input = document.createElement("input");
               input.type = "text";
               input.className = "TableInput";
@@ -37,14 +37,20 @@ function CreateTableau() {
                 input.placeholder = "a" + i + "," + j;
               }
               cell.appendChild(input)
-            } else if (i == 1 && isImplicit == true) {
+            } else if (isImplicit == true) {
               let input = document.createElement("input");
               input.type = "text";
               input.className = "Tableinput";
-              input.id = "TableInputA";
-              input.name = "a" + i + "," + j;
-              input.placeholder = "a" + i + "," + j;
-              cell.appendChild(input)
+              if (i == 0) {
+                input.id = "TableInputC";
+                input.name = "c" + i;
+                input.placeholder = "c" + i;
+              } else {
+                input.id = "TableInputA";
+                input.name = "a" + i + "," + j;
+                input.placeholder = "a" + i + "," + j;
+              }
+              cell.appendChile(input)
             }
             row.appendChild(cell);
           }
