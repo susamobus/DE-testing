@@ -39,6 +39,8 @@ function RK(f) {
     let sum = 0;
     let sum2 = 0;
     for (let i = 0; i < n; i++) {
+        sum = 0
+        sum2 = 0
         for (let j = 0; j < s; j++) {
             for (let l = 0; l < j; l++) {
                 sum += a[j][l] * k[l]
