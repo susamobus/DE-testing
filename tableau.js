@@ -80,9 +80,8 @@ function CreateTableau() {
           row.appendChild(cell);
         }
         tfoot.appendChild(row)
-        table.appendChild(tfoot)
       }
-      table.appendChild(tfoor)
+      table.appendChild(tfoot)
 }
 
 function UpdateTableau() {
