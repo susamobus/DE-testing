@@ -114,7 +114,7 @@ function CreateMethodTable() {
   for (let i = 0; i < expmethod.length; i++) {
     let cell = document.createElement("td")
     let button = document.createElement("button")
-    button.onclick = TableauDef(expmethod[i])
+    button.onclick = "TableauDef(expmethod[i])"
     button.className = "defbutton"
     button.id = "Exp"
     button.style.display = "block"
