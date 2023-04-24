@@ -63,7 +63,8 @@ body {
 
 .button {
     font-size: 15px;
-    background-color: gray;
+    color: black;
+    background-color: lightgray;
     padding: 5px;
     border: 1px solid black;
     height: 50px;

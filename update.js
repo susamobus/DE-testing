@@ -10,14 +10,13 @@ var a = [];
 var k = [];
 
 window.setInterval(function(){
-    document.getElementById("result").innerHTML = results
+    document.getElementById("result").innerHTML = k
     s = document.getElementById("stage").value
     n = document.getElementById("step").value
     h = document.getElementById("stepsize").value
     x0 = document.getElementById("x0").value
     y0 = document.getElementById("y0").value
-
-},50)
+},75)
 
 function g(x,y) {
     return x*x;
