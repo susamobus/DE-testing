@@ -28,10 +28,12 @@
         <br>
         <table id="table" class="MethodTable">
         <tr>
-            <td><button onclick="TableauDef('RK4')" class="defbutton">Classic Runge-Kutta method</button></td>
-            <td><button onclick="TableauDef('MP')" class="defbutton">Midpoint method</button></td>
-            <td><button onclick="TableauDef('HRM')" class="defbutton">Heun's/Ralston's method</button></td>
-            <td><button onclick="TableauDef('EM')" class="defbutton">Euler's method</button></td>
+            <td><button onclick="Tab('defbutton','Exp')" class="maindefbutton">Explicit methods</button></td>
+            <td><button onclick="TableauDef('RK4')" class="defbutton" id="Exp" style="display: block">Classic Runge-Kutta method</button></td>
+            <td><button onclick="TableauDef('MP')" class="defbutton" id="Exp" style="display: block">Midpoint method</button></td>
+            <td><button onclick="TableauDef('HRM')" class="defbutton" id="Exp" style="display: block">Heun's/Ralston's method</button></td>
+            <td><button onclick="TableauDef('EM')" class="defbutton" id="Exp" style="display: block">Euler's method</button></td>
+            <td><button class="defbutton" id="Adapt">test</button></td>
         </tr>
         </table>
         <br><br>

@@ -16,6 +16,22 @@ window.setInterval(function(){
     document.getElementById("test2").innerHTML = k
 },75)
 
+function ToggleMethods() {
+    let id = "Exp"
+    var tabs = document.getElementsByClassName("defbutton") 
+    if (document.getElementsByClassName("maindefbutton")[0].innerHTML == "Explicit methods") {
+        document.getElementsByClassName("maindefbutton")[0].innerHTML == "Adaptive methods"
+        id = "Adapt"
+    }
+    for (let i = 0; i < tabs.length; i++) {
+        if (tabs[i].id == id) {
+            tabs[i].style.display = "block"
+        } else {
+            tabs[i].style.display = "none"
+        }
+    }
+}
+
 function g(x,y) {
     return x*x;
 }

@@ -18,7 +18,7 @@ body {
 
 .MethodTable {
     border-collapse: collapse;
-    border-spacing: 2px;
+    border-spacing: 0px;
     border: 1px solid black;
     margin: 1px auto;
 }
@@ -81,7 +81,7 @@ body {
     width: 125px;
 }
 
-.defbutton {
+.maindefbutton {
     font-size: 8px;
     color: black;
     background-color: lightslategrey;
@@ -90,4 +90,16 @@ body {
     height: 35px;
     width: 100px;
     margin: 2px;
+}
+
+.defbutton {
+    font-size: 8px;
+    color: black;
+    background-color: lightsteelblue;
+    padding: 2px;
+    border: 1px solid black;
+    height: 35px;
+    width: 100px;
+    margin: 2px;
+    display: none;
 }
