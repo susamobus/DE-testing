@@ -70,3 +70,13 @@ body {
     height: 50px;
     width: 150px;
 }
+
+.defbutton {
+    font-size: 10px;
+    color: black;
+    background-color: lightslategrey;
+    padding: 2px;
+    border: 1px solid black;
+    height: 40px;
+    width: 120px;
+}

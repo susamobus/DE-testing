@@ -86,3 +86,27 @@ function UpdateTableau() {
     k.push(0)
   }
 }
+
+function ChangeTableau(a,b,c) {
+  for (i = 1; i <= s; i++) {
+    if (i > 1) {
+      for (j = 1; j < i; j++) {
+        document.getElementsByName("a" + i + "," + j)[0].value = a[i-1][j-1]
+      }
+      document.getElementsByName("c" + i)[0].value = c[i-1]
+    }
+    document.getElementsByName("b" + i)[0].value = b[i-1]
+  }
+}
+
+function TableauDef(def) {
+  if (def == 1) {
+    s = 4;
+    let defa = [0,["1/2"],[0,"1/2"],[0,0,1]];
+    let defb = ["1/6","1/3","1/3","/16"];
+    let defc = [0,"1/2","1/2",1];
+    CreateTableau();
+    ChangeTableau(defa,defb,defc);
+    UpdateTableau();
+  }
+}
