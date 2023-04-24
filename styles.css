@@ -8,6 +8,12 @@ body {
     outline: none;
 }
 
+.Input:focus {
+    border: 2px solid black;
+    border-radius: 3px;
+    outline: none;
+}
+
 .table {
     border-collapse: collapse;
     border-spacing: 0px;
@@ -53,4 +59,13 @@ body {
     font-size: 10px;
     margin: 0px;
     padding: 0px;
+}
+
+.button {
+    font-size: 15px;
+    color: gray;
+    padding: 10px;
+    border: 1px solid black;
+    height: 50px;
+    width: 200px;
 }

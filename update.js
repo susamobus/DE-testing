@@ -1,34 +1,22 @@
 var results = 0
-var s = 4
-var c2 = 1/2
-var c3 = 1/2
-var c4 = 1
-var b1 = 1/6
-var b2 = 1/3
-var b3 = 1/3
-var b4 = 1/6
-var a21 = 1/2
-var a31 = 0
-var a32 = 1/2
-var a41 = 0
-var a42 = 0
-var a43 = 1
-var k1 = 0
-var k2 = 0
-var k3 = 0
-var k4 = 0
-var c = [0,c2,c3,c4]
-var b = [b1,b2,b3,b4]
-var a = [0,[a21],[a31,a32],[a41,a42,a43]]
-var k = [k1,k2,k3,k4]
+var x0;
+var y0;
+var h;
+var n;
+var s;
+var c;
+var b;
+var a;
+var k;
 
 window.setInterval(function(){
     document.getElementById("result").innerHTML = results
     s = document.getElementById("stage").value
-    //test
-    document.getElementById("a").innerHTML = a
-    document.getElementById("b").innerHTML = b
-    document.getElementById("c").innerHTML = c
+    n = document.getElementsById("step").value
+    h = document.getElementById("stepsize").value
+    x0 = document.getElementById("x0").value
+    y0 = document.getElementById("y0").value
+
 },50)
 
 function g(x,y) {
@@ -36,14 +24,14 @@ function g(x,y) {
 }
 
 function Calculate() {
-    RK(g,0,1,1,1)
+    RK(g)
 }
 // f = function
 // x0, y0 = initial conditions
 // h = step size
 // n = number of steps
 
-function RK(f, x0, y0, h, n) {
+function RK(f) {
     let x = x0;
     let y = y0;
     let sum = 0;

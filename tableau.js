@@ -69,6 +69,7 @@ function UpdateTableau() {
   a = [0];
   b = [];
   c = [0];
+  k = [];
   for (i = 1; i <= s; i++) {
     if (i > 1) {
       let ai = []
@@ -82,5 +83,6 @@ function UpdateTableau() {
     }
     let bi = document.getElementsByName("b" + i)[0].value
     b.push(bi)
+    k.push(0)
   }
 }
