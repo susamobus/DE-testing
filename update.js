@@ -27,7 +27,7 @@ function ToggleMethods() {
         isImplicit = true
         id = "Imp"
     } else if (isAdaptive == false) {
-        document.getElementsByClassName("maindefbutton")[0].innerHTML = "Adaptive"
+        document.getElementsByClassName("maindefbutton")[0].innerHTML = "Adaptive (Soon)"
         document.getElementById("stepsizedisp").innerHTML = "Target: "
         document.getElementById("stepsdisp").innerHTML = "Threshold: "
         isImplicit = false
