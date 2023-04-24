@@ -102,7 +102,7 @@ function ChangeTableau(a,b,c) {
 function CreateMethodTable() {
   let expmethod = ["RK4","RK3","MP","HRM","HM3","RM3","FE"]
   let fullexpmethod = ["Classic Runge-Kutta","3rd order Runge-Kutta","Midpoint","Heun's/Ralston's","3rd order Heun","3rd order Ralston","Foward Euler"]
-  let table = document.getElementById("table")
+  let methodtable = document.getElementById("table")
   let row = document.createElement("tr")
   let cell = document.createElement("td")
   let mainbutton = document.createElement("button")
@@ -114,7 +114,7 @@ function CreateMethodTable() {
   for (let i = 0; i < expmethod.length; i++) {
     let cell = document.createElement("td")
     let button = document.createElement("button")
-    button.onclick = "TableauDef(expmethod[i])"
+    button.onclick = function() {TableauDef(expmethod[i])}
     button.className = "defbutton"
     button.id = "Exp"
     button.style.display = "block"
@@ -132,7 +132,7 @@ function CreateMethodTable() {
     cell.appendChild(button)
     row.appendChild(cell)
   }
-  table.appendChild(row)
+  methodtable.appendChild(row)
 }
 
 function TableauDef(def) {
