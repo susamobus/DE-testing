@@ -79,7 +79,8 @@ function CreateTableau() {
           cell.appendChild(input);
           row.appendChild(cell);
         }
-        tfoot.appendChild(row)
+        table.appendChild(tfoot)
+        table.appendChild(row)
       }
       table.appendChild(tfoot)
 }
