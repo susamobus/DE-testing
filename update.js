@@ -10,7 +10,9 @@ var a = [];
 var k = [];
 
 window.setInterval(function(){
-    document.getElementById("result").innerHTML = k
+    document.getElementById("result").innerHTML = results
+    document.getElementById("test1").innerHTML = k
+    document.getElementById("test2").innerHTML = a
     s = document.getElementById("stage").value
     n = document.getElementById("step").value
     h = document.getElementById("stepsize").value
