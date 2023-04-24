@@ -37,6 +37,14 @@ function CreateTableau() {
                 input.placeholder = "a" + i + "," + j;
               }
               cell.appendChild(input)
+            } else if (i == 1 && isImplicit == true) {
+              let input = document.createElement("input");
+              input.type = "text";
+              input.className = "Tableinput";
+              input.id = "TableInputA";
+              input.name = "a" + i + "," + j;
+              input.placeholder = "a" + i + "," + j;
+              cell.appendChild(input)
             }
             row.appendChild(cell);
           }
@@ -206,9 +214,9 @@ function TableauDef(def) {
     defc = [0];
   } else if (def == "BE") {
     s = 1;
-    defa = [0,[1]];
+    defa = [[1]];
     defb = [1];
-    defc = [0,1];
+    defc = [1];
   }
   document.getElementById("stage").value = s;
   CreateTableau();
