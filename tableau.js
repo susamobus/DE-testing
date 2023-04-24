@@ -66,21 +66,21 @@ function CreateTableau() {
 }
 
 function UpdateTableau() {
-  a = [0,0];
-  b = [0];
-  c = [0,0];
+  a = [0];
+  b = [];
+  c = [0];
   for (i = 1; i <= s; i++) {
-    b.push(0)
-    let ai = [0]
+    let ai = []
     if (i > 1) {
-      a.push(ai)
-      c.push(0)
       for (j = 1; j < s; j++) {
-        a[i].push(0)
-        a[i][j] = document.getElementsByName("a" + i + "," + j)[0].value
+        let aij = document.getElementsByName("a" + i + "," + j)[0].value
+        ai.push(aij)
       }
-      c[i] = document.getElementsByName("c" + i)[0].value
+      let ci = document.getElementsByName("c" + i)[0].value
+      c.push(ci)
+      a.push(ai)
     }
-    b[i] = document.getElementsByName("b" + i)[0].value
+    let bi = document.getElementsByName("b" + i)[0].value
+    b.push(bi)
   }
 }

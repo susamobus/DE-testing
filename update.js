@@ -17,10 +17,10 @@ var k1 = 0
 var k2 = 0
 var k3 = 0
 var k4 = 0
-var c = [0,0,c2,c3,c4]
-var b = [0,b1,b2,b3,b4]
-var a = [0,0,[a21],[a31,a32],[a41,a42,a43]]
-var k = [0,k1,k2,k3,k4]
+var c = [0,c2,c3,c4]
+var b = [b1,b2,b3,b4]
+var a = [0,[a21],[a31,a32],[a41,a42,a43]]
+var k = [k1,k2,k3,k4]
 
 window.setInterval(function(){
     document.getElementById("result").innerHTML = results
@@ -49,9 +49,9 @@ function RK(f, x0, y0, h, n) {
     let sum = 0;
     let sum2 = 0;
     for (let i = 0; i < n; i++) {
-        for (let j = 1; j <= s; j++) {
-            for (let l = 1; l < j; l++) {
-                sum += a[j][l] * k[l]
+        for (let j = 0; j < s; j++) {
+            for (let l = 0; l < j-1; l++) {
+                sum += a[j+1][l] * k[l]
             }
             k[j] = f(x + c[j] * h, y + h * sum)
             sum2 += b[j] * k[j]
