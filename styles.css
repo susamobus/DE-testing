@@ -82,24 +82,24 @@ body {
 }
 
 .maindefbutton {
-    font-size: 6px;
+    font-size: 10px;
     color: black;
     background-color: lightslategrey;
-    padding: 2px;
+    padding: 1px;
     border: 1px solid black;
     height: 30px;
-    width: 80px;
+    width: 50px;
     margin: 2px;
 }
 
 .defbutton {
-    font-size: 6px;
+    font-size: 10px;
     color: black;
     background-color: lightsteelblue;
-    padding: 2px;
+    padding: 1px;
     border: 1px solid black;
     height: 30px;
-    width: 80px;
+    width: 50px;
     margin: 2px;
     display: none;
 }
