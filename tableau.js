@@ -118,11 +118,16 @@ function TableauDef(def) {
     defa = [0,["2/3"]];
     defb = ["1/4","3/4"];
     defc = [0,"2/3"]
-  } else if (def == "EM") {
+  } else if (def == "FE") {
     s = 1;
     defa = [0];
     defb = [1];
     defc = [0];
+  } else if (def == "GM") {
+    s = document.getElementById("GenericOrder").value;
+    if (s == 2) {
+      
+    }
   }
   document.getElementById("stage").value = s;
   CreateTableau();
