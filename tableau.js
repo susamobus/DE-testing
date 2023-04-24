@@ -12,7 +12,7 @@ function CreateTableau() {
           let row = document.createElement("tr");
           let im = i
           if (isImplicit == true) {
-            im = s
+            im = s+1
           }
           for (let j = 0; j < im; j++) {
             let cell = document.createElement("td");
@@ -23,7 +23,7 @@ function CreateTableau() {
               input.disabled = "true";
               input.placeholder = "c1 (0)";
               cell.appendChild(input)
-            } else {
+            } else if (i !== 1) {
               let input = document.createElement("input");
               input.type = "text";
               input.className = "TableInput";
@@ -80,7 +80,7 @@ function UpdateTableau() {
       let ai = []
       let im = i
       if (isImplicit == true) {
-        im = s
+        im = s+1
       }
       for (j = 1; j < im; j++) {
         let aij = Fraction(document.getElementsByName("a" + i + "," + j)[0].value)
@@ -101,9 +101,9 @@ function ChangeTableau(a,b,c) {
     if (i > 1) {
       let im = i
       if (isImplicit == true) {
-        im = s
+        im = s+1
       }
-      for (j = 1; j < i; j++) {
+      for (j = 1; j < im; j++) {
         document.getElementsByName("a" + i + "," + j)[0].value = a[i-1][j-1]
       }
       document.getElementsByName("c" + i)[0].value = c[i-1]
