@@ -89,18 +89,18 @@ body {
     padding: 1px;
     border: 1px solid black;
     height: 30px;
-    width: 50px;
+    width: 60px;
     margin: 2px;
 }
 
 .defbutton {
-    font-size: 10px;
+    font-size: 8px;
     color: black;
     background-color: lightsteelblue;
     padding: 1px;
     border: 1px solid black;
     height: 30px;
-    width: 50px;
+    width: 60px;
     margin: 2px;
     display: none;
 }

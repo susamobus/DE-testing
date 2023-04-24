@@ -101,8 +101,8 @@ function ChangeTableau(a,b,c) {
 }
 
 function CreateMethodTable() {
-  let expmethod = ["RK4","RK3","MP","HRM","HM3","RM3","FE"]
-  let fullexpmethod = ["Classic Runge-Kutta","3rd order Runge-Kutta","Midpoint","Heun's/Ralston's","3rd order Heun","3rd order Ralston","Foward Euler"]
+  let expmethod = ["RK4","RK3","3/8","MP","HRM","HM3","RM3","SP","FE"]
+  let fullexpmethod = ["RK4","RK3","3/8","Midpoint","Heun's/Ralston's","3rd order Heun","3rd order Ralston","Stability preserving","Forward Euler"]
   let methodtable = document.getElementById("table")
   let row = document.createElement("tr")
   let cell = document.createElement("td")
@@ -119,7 +119,7 @@ function CreateMethodTable() {
     button.className = "defbutton"
     button.id = "Exp"
     button.style.display = "block"
-    button.innerHTML = expmethod[i]
+    button.innerHTML = fullexpmethod[i]
     cell.appendChild(button)
     row.appendChild(cell)
   }
@@ -150,6 +150,11 @@ function TableauDef(def) {
     defa = [0,["1/2"],[-1,2]];
     defb = ["1/6","2/3","1/6"];
     defc = [0,"1/2",1];
+  } else if (def == "3/8") {
+    s = 4;
+    defa = [0,["1/3"],["-1/3",1],[1,-1,1]];
+    defb = ["1/8","3/8","3/8","1/8"];
+    defc = [0,"1/3","2/3",1];
   } else if (def == "MP") {
     s = 2;
     defa = [0,["1/2"]];
@@ -170,6 +175,11 @@ function TableauDef(def) {
     defa = [0,["1/2"],[0,"3/4"]];
     defb = ["2/9","1/3","4/9"];
     defc = [0,"1/2","3/4"];
+  } else if (def == "SP") {
+    s = 3;
+    defa = [0,[1],["1/4","1/4"]];
+    defb = ["1/6","1/6","2/3"];
+    defc = [0,1,"1/2"];
   } else if (def == "FE") {
     s = 1;
     defa = [0];
