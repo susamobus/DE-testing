@@ -93,6 +93,16 @@ body {
     width: 125px;
 }
 
+.confirmbutton {
+    font-size: 10px;
+    color: black;
+    background-color: lightgray;
+    padding: 2px;
+    border: 1px solid black;
+    height: 30px;
+    width: 80px;
+}
+
 .mainbutton {
     font-size: 20px;
     color: black;
