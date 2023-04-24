@@ -93,6 +93,16 @@ body {
     width: 125px;
 }
 
+.mainbutton {
+    font-size: 20px;
+    color: black;
+    background-color: lightcoral;
+    padding: 5px;
+    border: 1px solid black;
+    height: 60px;
+    width: 150px
+}
+
 .maindefbutton {
     font-size: 8px;
     color: black;
