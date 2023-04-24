@@ -100,16 +100,19 @@ function ChangeTableau(a,b,c) {
 }
 
 function TableauDef(def) {
+  var defa;
+  var defb;
+  var defc;
   if (def == "RK4") {
     s = 4;
-    let defa = [0,["1/2"],[0,"1/2"],[0,0,1]];
-    let defb = ["1/6","1/3","1/3","1/6"];
-    let defc = [0,"1/2","1/2",1];
+    defa = [0,["1/2"],[0,"1/2"],[0,0,1]];
+    defb = ["1/6","1/3","1/3","1/6"];
+    defc = [0,"1/2","1/2",1];
   } else if (def == "MP") {
     s = 2;
-    let defa = [0,["1/2"]];
-    let defb = [0,1];
-    let defc = [0,"1/2"];
+    defa = [0,["1/2"]];
+    defb = [0,1];
+    defc = [0,"1/2"];
   }
   document.getElementById("stage").value = s;
   CreateTableau();
