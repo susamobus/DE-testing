@@ -68,8 +68,6 @@ function Fraction(input) {
         return Math.tan(argument);
       } else if (functionName === 'sqrt') {
         return Math.sqrt(argument);
-      } else {
-        throw new Error(`Unknown function '${functionName}'`);
       }
     }
   
