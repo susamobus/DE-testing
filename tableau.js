@@ -98,7 +98,7 @@ function UpdateTableau() {
 
 function ChangeTableau(a,b,c) {
   for (i = 1; i <= s; i++) {
-    if (i > 1) {
+    if (i > 1 || isImplicit == true) {
       let im = i
       if (isImplicit == true) {
         im = s+1
