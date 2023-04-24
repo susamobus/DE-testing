@@ -76,16 +76,37 @@ function RK() {
     let sum = 0;
     let sum2 = 0;
     let sum3 = 0;
-    let e = 0;
     let n2 = n
+    if (isAdaptive == true) {
+        while (target-x > 0) {
+        sum = 0
+        sum2 = 0
+        sum3 = 0
+        e = 0
+        for (let j = 0; j < s; j++) {
+            for (let l = 0; l < j; l++) {
+                sum += a[j][l] * k[l]
+            }
+            k[j] = evaluateFunction(FunctionInput,x + c[j] * h, y + h * sum)
+            sum3 += b2[j] * j[j]
+            sum2 += b[j] * k[j]
+        }
+        }
+        y += h * sum2;
+        y2 += h * sum3
+        x += h;
+        if (y-y2 >= acc) {
+            // Decrease h
+        } else {
+            // Increase h
+        }
+    } else {
     if (isImplicit == true) {
         n2 = n+1
     }
     for (let i = 0; i < n2; i++) {
         sum = 0
         sum2 = 0
-        sum3 = 0
-        e = 0
         for (let j = 0; j < s; j++) {
             let lm = j
             if (isImplicit == true) {
@@ -95,23 +116,12 @@ function RK() {
                 sum += a[j][l] * k[l]
             }
             k[j] = evaluateFunction(FunctionInput,x + c[j] * h, y + h * sum)
-            if (isAdaptive == true) {
-                sum3 += b2[j] * j[j]
-            }
             sum2 += b[j] * k[j]
         }
         y += h * sum2;
         x += h;
-        if (isAdaptive == true) {
-            y2 += h * sum3
-            e = y - y2
-            if (e > acc) {
-                h += 0.1
-            } else {
-                h -= 0.1
-            }
-        }
     }
     results = y
+}
 }
   
