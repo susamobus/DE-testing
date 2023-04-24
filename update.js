@@ -19,9 +19,11 @@ window.setInterval(function(){
 function ToggleMethods() {
     let id = "Exp"
     var tabs = document.getElementsByClassName("defbutton") 
-    if (document.getElementsByClassName("maindefbutton")[0].innerHTML == "Explicit methods") {
-        document.getElementsByClassName("maindefbutton")[0].innerHTML == "Adaptive methods"
+    if (document.getElementsByClassName("maindefbutton")[0].innerHTML == "Adaptive methods") {
+        document.getElementsByClassName("maindefbutton")[0].innerHTML = "Explicit methods"
         id = "Adapt"
+    } else {
+        document.getElementsByClassName("maindefbutton")[0].innerHTML = "Adaptive methods"
     }
     for (let i = 0; i < tabs.length; i++) {
         if (tabs[i].id == id) {
