@@ -10,17 +10,24 @@
         <span class="MainTitle" style="font-size: 40px">Initial Value Problem Solver</span>
         <br><br>
         <span>Function: </span>
-        <input type="text" id="FunctionInput" class="Input">
+        <input type="text" id="FunctionInput" class="MainInput">
         <br>
-        <span>x0: </span>
-        <input type="number" id="x0" class="Input" style="width: 60px">
-        <span>y0: </span>
-        <input type="number" id="y0" class="Input" style="width: 60px">
-        <br>
-        <span>Stepsize: </span>
-        <input type="number" id="stepsize" class="Input" style="width: 60px">
-        <span>Steps: </span>
-        <input type="number" id="step" class="Input" style="width: 60px">
+        <table class="InputTable">
+            <tr>
+                <td><span>Initial Values</span></td>
+                <td><span>x0: </span></td>
+                <td><input type="number" id="x0" class="Input"></td>
+                <td><span>y0: </span></td>
+                <td><input type="number" id="y0" class="Input"></td>
+            </tr>
+            <tr>
+                <td><span>Accuracy</span></td>
+                <td><span>Stepsize: </span></td>
+                <td><input type="number" id="stepsize" class="Input"></td>
+                <td><span>Steps: </span></td>
+                <td><input type="number" id="step" class="Input"></td>
+            </tr>
+        </table>
         <br><br>
         <span style="font-size: 25px">Butcher's Tableau</span>
         <br>
