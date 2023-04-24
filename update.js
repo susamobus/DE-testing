@@ -21,21 +21,22 @@ window.setInterval(function(){
 
 function ToggleMethods() {
     let id = "Exp"
-    let id2 = "Non-Adapt"
     var tabs = document.getElementsByClassName("defbutton") 
-    var cells = document.getElementsByClassName("cell")
     if (isImplicit == false && isAdaptive == false) {
         document.getElementsByClassName("maindefbutton")[0].innerHTML = "Implicit"
         isImplicit = true
         id = "Imp"
     } else if (isAdaptive == false) {
         document.getElementsByClassName("maindefbutton")[0].innerHTML = "Adaptive"
+        document.getElementById("stepsizedisp").innerHTML = "Target: "
+        document.getElementById("stepsdisp").innerHTML = "Threshold: "
         isImplicit = false
         isAdaptive = true
         id = "Adp"
-        id2 = "Adapt"
     } else {
         document.getElementsByClassName("maindefbutton")[0].innerHTML = "Explicit"
+        document.getElementById("stepsizedisp").innerHTML = "Stepsize: "
+        document.getElementById("stepsdisp").innerHTML = "Steps: "
         isAdaptive = false
     }
     for (let i = 0; i < tabs.length; i++) {
@@ -45,30 +46,20 @@ function ToggleMethods() {
             tabs[i].style.display = "none"
         }
     }
-    for (let i = 0; i < cells.length; i++) {
-        if (cells[i].id == id2) {
-            if (cells[i].innerHTML) {
-                cells[i].style.display = "inline"
-            } else {
-                cells[i].style.display = "block"
-            }
-        } else {
-            cells[i].style.display = "none"
-        }
-    }
 }
 
 function Calculate() {
     FunctionInput = document.getElementById("FunctionInput").value
     s = Number(document.getElementById("stage").value)
-    n = Number(document.getElementById("step").value)
-    h = Number(document.getElementById("stepsize").value)
+    if (isAdaptive == true) {
+        acc = Number(document.getElementById("stepsize").value)
+        target = Number(document.getElementById("step").value)
+    } else {
+        n = Number(document.getElementById("step").value)
+        h = Number(document.getElementById("stepsize").value)
+    }
     x0 = Number(document.getElementById("x0").value)
     y0 = Number(document.getElementById("y0").value)
-    if (isAdaptive == true) {
-        acc = Number(document.getElementById("threshold").value)
-        target = Number(document.getElementById("target").value)
-    }
     UpdateTableau()
     RK()
 }
