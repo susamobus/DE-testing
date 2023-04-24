@@ -1,4 +1,7 @@
 function CreateTableau() {
+  if (s==0) {
+    return;
+  }
   s = Number(document.getElementById("stage").value)
   let table = document.getElementById("tableau");
 
