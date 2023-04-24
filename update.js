@@ -12,7 +12,7 @@ var k = [];
 window.setInterval(function(){
     document.getElementById("result").innerHTML = results
     document.getElementById("test1").innerHTML = k
-    document.getElementById("test2").innerHTML = a
+    document.getElementById("test2").innerHTML = n
     s = document.getElementById("stage").value
     n = document.getElementById("step").value
     h = document.getElementById("stepsize").value
@@ -40,7 +40,7 @@ function RK(f) {
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < s; j++) {
             for (let l = 0; l < j; l++) {
-                sum += a[j+1][l] * k[l]
+                sum += a[j][l] * k[l]
             }
             k[j] = f(x + c[j] * h, y + h * sum)
             sum2 += b[j] * k[j]
