@@ -108,6 +108,11 @@ function TableauDef(def) {
     defa = [0,["1/2"],[0,"1/2"],[0,0,1]];
     defb = ["1/6","1/3","1/3","1/6"];
     defc = [0,"1/2","1/2",1];
+  } else if (def == "RK3") {
+    s = 3;
+    defa = [0,["1/2"],[-1,2]];
+    defb = ["1/6","2/3","1/6"];
+    defc = [0,"1/2",1];
   } else if (def == "MP") {
     s = 2;
     defa = [0,["1/2"]];
@@ -118,16 +123,23 @@ function TableauDef(def) {
     defa = [0,["2/3"]];
     defb = ["1/4","3/4"];
     defc = [0,"2/3"]
+  } else if (def == "HM3") {
+    s = 3;
+    defa = [0,["1/3"],[0,"2/3"]];
+    defb = ["1/4",0,"3/4"];
+    defc = [0,"1/3","2/3"];
+  } else if (def == "RM3") {
+    s = 3;
+    defa = [0,["1/2"],[0,"3/4"]];
+    defb = ["2/9","1/3","4/9"];
+    defc = [0,"1/2","3/4"];
   } else if (def == "FE") {
     s = 1;
     defa = [0];
     defb = [1];
     defc = [0];
   } else if (def == "GM") {
-    s = document.getElementById("GenericOrder").value;
-    if (s == 2) {
-      
-    }
+    
   }
   document.getElementById("stage").value = s;
   CreateTableau();

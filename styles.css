@@ -31,24 +31,6 @@ body {
     margin: 1px auto;
 }
 
-.MethodInput {
-    font-size: 8px;
-    color: black;
-    background-color: lightsteelblue;
-    padding: 2px;
-    border: 1px solid black;
-    border-radius: 0px;
-    height: 15px;
-    width: 100px;
-    margin: 2px;
-    display: none;
-}
-
-.MethodInput:focus-visible {
-    outline: none;
-    border-radius: 0px;
-}
-
 .TableInput {
     width: 60px;
     height: 20px;
@@ -100,24 +82,24 @@ body {
 }
 
 .maindefbutton {
-    font-size: 8px;
+    font-size: 6px;
     color: black;
     background-color: lightslategrey;
     padding: 2px;
     border: 1px solid black;
     height: 30px;
-    width: 100px;
+    width: 80px;
     margin: 2px;
 }
 
 .defbutton {
-    font-size: 8px;
+    font-size: 6px;
     color: black;
     background-color: lightsteelblue;
     padding: 2px;
     border: 1px solid black;
     height: 30px;
-    width: 100px;
+    width: 80px;
     margin: 2px;
     display: none;
 }

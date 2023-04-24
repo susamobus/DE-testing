@@ -30,10 +30,12 @@
         <tr>
             <td><button onclick="ToggleMethods()" class="maindefbutton">Adaptive methods</button></td>
             <td><button onclick="TableauDef('RK4')" class="defbutton" id="Exp" style="display: block">Classic Runge-Kutta method</button></td>
+            <td><button onclick="TableauDef('RK3')" class="defbutton" id="Exp" style="display: block">3rd order Runge-Kutta method</button></td>
             <td><button onclick="TableauDef('MP')" class="defbutton" id="Exp" style="display: block">Midpoint method</button></td>
             <td><button onclick="TableauDef('HRM')" class="defbutton" id="Exp" style="display: block">Heun's/Ralston's method</button></td>
-            <td><button onclick="TableauDef('FE')" class="defbutton" id="Exp" style="display: block">Euler's method</button></td>
-            <td><button onclick="TableauDef('GM')" class="defbutton" id="Exp" style="display: block; height: 15px;">Generic methods</button><input class="MethodInput" id="GenericOrder" placeholder="Order (2/3)"></td>
+            <td><button onclick="TableauDef('HM3')" class="defbutton" id="Exp" style="display: block">3rd order Heun's method</button></td>
+            <td><button onclick="TableauDef('RM3')" class="defbutton" id="Exp" style="display: block">3rd order Ralston's method</button></td>
+            <td><button onclick="TableauDef('FE')" class="defbutton" id="Exp" style="display: block">Foward Euler method</button></td>
             <td><button class="defbutton" id="Adapt">test</button></td>
         </tr>
         </table>
