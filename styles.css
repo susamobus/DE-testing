@@ -19,6 +19,7 @@ body {
 .MethodTable {
     border-collapse: collapse;
     border-spacing: 0px;
+    background-color: lightgray;
     border: 1px solid black;
     margin: 1px auto;
 }
@@ -82,7 +83,7 @@ body {
 }
 
 .maindefbutton {
-    font-size: 10px;
+    font-size: 8px;
     color: black;
     background-color: lightslategrey;
     padding: 1px;

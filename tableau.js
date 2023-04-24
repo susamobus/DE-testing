@@ -107,7 +107,7 @@ function CreateMethodTable() {
   let cell = document.createElement("td")
   let mainbutton = document.createElement("button")
   mainbutton.onclick = function() {ToggleMethods()}
-  mainbutton.innerHTML = "Adaptive methods"
+  mainbutton.innerHTML = "Adaptive"
   mainbutton.className = "maindefbutton"
   cell.appendChild(mainbutton)
   row.appendChild(cell)
