@@ -56,7 +56,7 @@ function RK(f) {
     let y = y0;
     let sum = 0;
     let sum2 = 0;
-    for (let i = 0; i <= n; i++) {
+    for (let i = 0; i < n; i++) {
         sum = 0
         sum2 = 0
         for (let j = 0; j < s; j++) {
@@ -71,7 +71,6 @@ function RK(f) {
             sum2 += b[j] * k[j]
         }
         y += h * sum2;
-        test2 = y
         x += h;
     }
     results = y
