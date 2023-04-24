@@ -50,7 +50,7 @@ function RK(f, x0, y0, h, n) {
     let sum2 = 0;
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < s; j++) {
-            for (let l = 0; l < j-1; l++) {
+            for (let l = 0; l < j; l++) {
                 sum += a[j+1][l] * k[l]
             }
             k[j] = f(x + c[j] * h, y + h * sum)

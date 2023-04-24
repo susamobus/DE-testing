@@ -70,8 +70,8 @@ function UpdateTableau() {
   b = [];
   c = [0];
   for (i = 1; i <= s; i++) {
-    let ai = []
     if (i > 1) {
+      let ai = []
       for (j = 1; j < s; j++) {
         let aij = document.getElementsByName("a" + i + "," + j)[0].value
         ai.push(aij)
