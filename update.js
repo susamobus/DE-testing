@@ -15,11 +15,11 @@ window.setInterval(function(){
     document.getElementById("result").innerHTML = results
     document.getElementById("test1").innerHTML = test1
     document.getElementById("test2").innerHTML = test2
-    s = ParseFloat(document.getElementById("stage").value)
-    n = ParseFloat(document.getElementById("step").value)
-    h = ParseFloat(document.getElementById("stepsize").value)
-    x0 = ParseFloat(document.getElementById("x0").value)
-    y0 = ParseFloat(document.getElementById("y0").value)
+    s = Number(document.getElementById("stage").value)
+    n = Number(document.getElementById("step").value)
+    h = Number(document.getElementById("stepsize").value)
+    x0 = Number(document.getElementById("x0").value)
+    y0 = Number(document.getElementById("y0").value)
 },75)
 
 function g(x,y) {
