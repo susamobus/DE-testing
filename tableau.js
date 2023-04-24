@@ -1,5 +1,6 @@
 function CreateTableau() {
-    let table = document.getElementById("tableau");
+  s = Number(document.getElementById("stage").value)
+  let table = document.getElementById("tableau");
 
     // Delete previous table
     while (table.hasChildNodes()) {
