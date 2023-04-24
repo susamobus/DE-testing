@@ -28,8 +28,8 @@ function CreateTableau() {
                 input.placeholder = "c" + i;
               } else {
                 input.id = "TableInputA";
-                input.name = "a" + i + "," + j-1;
-                input.placeholder = "a" + i + "," + j-1;
+                input.name = "a" + i + "," + (j-1);
+                input.placeholder = "a" + i + "," + (j-1);
               }
               cell.appendChild(input)
             }
