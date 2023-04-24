@@ -6,7 +6,7 @@
         <script type="text/javascript" src="tableau.js"></script>
         <script type="text/javascript" src="input.js"></script>
     </head>
-    <body>
+    <body onload="CreateMethodTable()">
         <span>Function: no input yet</span>
         <br><br>
         <span>x0: </span>
@@ -26,19 +26,7 @@
         <br><br>
         <table id="tableau" class="table"></table>
         <br>
-        <table id="table" class="MethodTable">
-        <tr>
-            <td><button onclick="ToggleMethods()" class="maindefbutton">Adaptive methods</button></td>
-            <td><button onclick="TableauDef('RK4')" class="defbutton" id="Exp" style="display: block">Classic Runge-Kutta method</button></td>
-            <td><button onclick="TableauDef('RK3')" class="defbutton" id="Exp" style="display: block">3rd order Runge-Kutta method</button></td>
-            <td><button onclick="TableauDef('MP')" class="defbutton" id="Exp" style="display: block">Midpoint method</button></td>
-            <td><button onclick="TableauDef('HRM')" class="defbutton" id="Exp" style="display: block">Heun's/Ralston's method</button></td>
-            <td><button onclick="TableauDef('HM3')" class="defbutton" id="Exp" style="display: block">3rd order Heun's method</button></td>
-            <td><button onclick="TableauDef('RM3')" class="defbutton" id="Exp" style="display: block">3rd order Ralston's method</button></td>
-            <td><button onclick="TableauDef('FE')" class="defbutton" id="Exp" style="display: block">Foward Euler method</button></td>
-            <td><button class="defbutton" id="Adapt">test</button></td>
-        </tr>
-        </table>
+        <table id="table" class="MethodTable"></table>
         <br><br>
         <button onclick="CreateTableau()" class="button">Create Tableau</button>
         <br><br>

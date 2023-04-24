@@ -99,6 +99,42 @@ function ChangeTableau(a,b,c) {
   }
 }
 
+function CreateMethodTable() {
+  let expmethod = ["RK4","RK3","MP","HRM","HM3","RM3","FE"]
+  let fullexpmethod = ["Classic Runge-Kutta","3rd order Runge-Kutta","Midpoint","Heun's/Ralston's","3rd order Heun","3rd order Ralston","Foward Euler"]
+  let table = document.getElementById("table")
+  let row = document.createElement("tr")
+  let cell = document.createElement("td")
+  let mainbutton = document.createElement("button")
+  mainbutton.onclick = ToggleMethods()
+  mainbutton.innerHTML = "Adaptive methods"
+  mainbutton.class = "maindefbutton"
+  cell.appendChild(mainbutton)
+  row.appendChild(cell)
+  for (let i = 0; i < expmethod.length; i++) {
+    let cell = document.createElement("td")
+    let button = document.createElement("button")
+    button.onclick = TableauDef(expmethod[i])
+    button.className = "defbutton"
+    button.id = "Exp"
+    button.style.display = "block"
+    button.innerHTML = expmethod[i]
+    cell.appendChild(button)
+    row.appendChild(cell)
+  }
+  let adpmethod = ["Test"]
+  for (let i = 0; i < adpmethod.length; i++) {
+    let cell = document.createElement("td")
+    let button = document.createElement("button")
+    button.className = "defbutton"
+    button.id = "Adapt"
+    button.innerHTML = adpmethod[i]
+    cell.appendChild(button)
+    row.appendChild(cell)
+  }
+  table.appendChild(row)
+}
+
 function TableauDef(def) {
   var defa;
   var defb;
