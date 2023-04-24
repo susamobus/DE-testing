@@ -70,8 +70,8 @@ body {
     background-color: lightgray;
     padding: 5px;
     border: 1px solid black;
-    height: 50px;
-    width: 150px;
+    height: 45px;
+    width: 125px;
 }
 
 .defbutton {
@@ -82,4 +82,5 @@ body {
     border: 1px solid black;
     height: 35px;
     width: 100px;
+    margin: 2px;
 }
