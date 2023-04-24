@@ -11,7 +11,7 @@ function CreateTableau() {
           let row = document.createElement("tr");
           for (let j = 0; j < i; j++) {
             let cell = document.createElement("td");
-            if (i == 0 && j == 0) {
+            if (i == 1 && j == 0) {
               let input = document.createElement("input");
               input.className = "TableInput";
               input.id = "TableInputC";
