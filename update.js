@@ -44,6 +44,7 @@ function Calculate() {
     h = Number(document.getElementById("stepsize").value)
     x0 = Number(document.getElementById("x0").value)
     y0 = Number(document.getElementById("y0").value)
+    UpdateTableau()
     RK(g)
 }
 
@@ -57,13 +58,17 @@ function RK(f) {
     let y = y0;
     let sum = 0;
     let sum2 = 0;
-    for (let i = 0; i < n; i++) {
+    let n2 = n
+    if (isImplicit == true) {
+        n2 = n+1
+    }
+    for (let i = 0; i < n2; i++) {
         sum = 0
         sum2 = 0
         for (let j = 0; j < s; j++) {
             let lm = j
             if (isImplicit == true) {
-                lm = s
+                lm = s+1
             }
             for (let l = 0; l < lm; l++) {
                 sum += a[j][l] * k[l]
