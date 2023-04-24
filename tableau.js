@@ -113,6 +113,11 @@ function TableauDef(def) {
     defa = [0,["1/2"]];
     defb = [0,1];
     defc = [0,"1/2"];
+  } else if (def == "RM") {
+    s = 2;
+    defa = [0,["2/3"]];
+    defb = ["1/4","3/4"];
+    defc = [0,"2/3"]
   }
   document.getElementById("stage").value = s;
   CreateTableau();
