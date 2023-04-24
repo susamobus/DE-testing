@@ -7,6 +7,8 @@
         <script type="text/javascript" src="input.js"></script>
     </head>
     <body onload="CreateMethodTable()">
+        <span class="MainTitle" style="font-size: 40px">Initial Value Problem Solver</span>
+        <br><br>
         <span>Function: </span>
         <input type="text" id="FunctionInput" class="Input">
         <br>
@@ -22,16 +24,16 @@
         <span>Steps: </span>
         <input type="number" id="step" class="Input">
         <br><br>
-        <span class="Title">Butcher's Tableau</span>
+        <span style="font-size: 25px">Butcher's Tableau</span>
         <br>
         <table id="tableau" class="table"></table>
         <br>
         <table id="table" class="MethodTable"></table>
         <br>
         <span>Number of Stages: </span>
-        <input type="number" id="stage" name="stage" class="Input">
+        <input type="number" id="stage" name="stage" class="Input" maxlength="2">
         <button onclick="CreateTableau()" class="confirmbutton">Create Tableau</button>
-        <br><br>
+        <br><br><br>
         <button onclick="Calculate()" class="mainbutton">Calculate</button><br><br>
         <span class="Result">Result: <span id="result">loading</span></span>
         <br><br>
