@@ -10,7 +10,7 @@ body {
     outline: none;
 }
 
-.Input:focus {
+.Input:focus-visible {
     border: 2px solid black;
     border-radius: 3px;
     outline: none;
@@ -34,13 +34,13 @@ body {
     margin: 1px;
 }
 
-.TableInput:focus {
+.TableInput:focus-visible {
     border: 1px solid black;
     border-radius: 0px;
     outline: none;
     margin: 0px;
 }
-#TableInputC:focus {
+#TableInputC:focus-visible {
     border: 1px solid black;
     border-radius: 0px;
     margin: 0px;
