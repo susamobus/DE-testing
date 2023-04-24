@@ -46,6 +46,7 @@ function Calculate() {
     y0 = Number(document.getElementById("y0").value)
     RK(g)
 }
+
 // f = function
 // x0, y0 = initial conditions
 // h = step size
