@@ -12,7 +12,7 @@ var k = [];
 window.setInterval(function(){
     document.getElementById("result").innerHTML = results
     document.getElementById("test1").innerHTML = k
-    document.getElementById("test2").innerHTML = n
+    document.getElementById("test2").innerHTML = b
     s = document.getElementById("stage").value
     n = document.getElementById("step").value
     h = document.getElementById("stepsize").value
