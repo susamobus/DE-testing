@@ -1,5 +1,5 @@
 function CreateTableau() {
-    let table = document.getElementById("table");
+    let table = document.getElementById("tableau");
 
     // Delete previous table
     while (table.hasChildNodes()) {

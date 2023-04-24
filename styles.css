@@ -16,6 +16,13 @@ body {
     outline: none;
 }
 
+.MethodTable {
+    border-collapse: collapse;
+    border-spacing: 2px;
+    border: 1px solid black;
+    margin: 1px auto;
+}
+
 .table {
     border-collapse: collapse;
     border-spacing: 0px;

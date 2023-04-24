@@ -24,15 +24,16 @@
         <span>Number of Stages: </span>
         <input type="number" id="stage" name="stage" class="Input">
         <br><br>
-        <table id="table" class="table"></table>
+        <table id="tableau" class="table"></table>
         <br>
-        <button onclick="TableauDef('RK4')" class="defbutton">Classic Runge-Kutta method</button>
-        <br>
-        <button onclick="TableauDef('MP')" class="defbutton">Midpoint method</button>
-        <br>
-        <button onclick="TableauDef('HRM')" class="defbutton">Heun's/Ralston's method</button>
-        <br>
-        <button onclick="TableauDef('EM')" class="defbutton">Euler's method</button>
+        <table id="table" class="MethodTable">
+        <tr>
+            <td><button onclick="TableauDef('RK4')" class="defbutton">Classic Runge-Kutta method</button></td>
+            <td><button onclick="TableauDef('MP')" class="defbutton">Midpoint method</button></td>
+            <td><button onclick="TableauDef('HRM')" class="defbutton">Heun's/Ralston's method</button></td>
+            <td><button onclick="TableauDef('EM')" class="defbutton">Euler's method</button></td>
+        </tr>
+        </table>
         <br><br>
         <button onclick="CreateTableau()" class="button">Create Tableau</button>
         <br><br>
