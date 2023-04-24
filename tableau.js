@@ -135,13 +135,15 @@ function CreateMethodTable() {
     cell.appendChild(button)
     row.appendChild(cell)
   }
-  let adpmethod = ["Test"]
-  for (let i = 0; i < adpmethod.length; i++) {
+  let impmethod = ["BE"]
+  let fullimpmethod = ["Backward Euler"]
+  for (let i = 0; i < impmethod.length; i++) {
     let cell = document.createElement("td")
     let button = document.createElement("button")
+    button.onclick = function() {TableauDef(impmethod[i])}
     button.className = "defbutton"
     button.id = "Imp"
-    button.innerHTML = adpmethod[i]
+    button.innerHTML = fullimpmethod[i]
     cell.appendChild(button)
     row.appendChild(cell)
   }
@@ -202,8 +204,11 @@ function TableauDef(def) {
     defa = [0];
     defb = [1];
     defc = [0];
-  } else if (def == "GM") {
-    
+  } else if (def == "BE") {
+    s = 1;
+    defa = [0,[1]];
+    defb = [1];
+    defc = [0,1];
   }
   document.getElementById("stage").value = s;
   CreateTableau();

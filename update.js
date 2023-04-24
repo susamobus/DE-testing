@@ -60,6 +60,10 @@ function RK(f) {
         sum = 0
         sum2 = 0
         for (let j = 0; j < s; j++) {
+            let lm = j
+            if (isImplicit == true) {
+                lm = s+1
+            }
             for (let l = 0; l < j; l++) {
                 sum += a[j][l] * k[l]
             }
