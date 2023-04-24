@@ -66,13 +66,29 @@ function CreateTableau() {
           row.appendChild(cell);
         }
         tfoot.appendChild(row)
-        table.appendChild(tfoot)
 
+        if (isAdaptive == true) {
+          for (let i = 1; i <= s; i++) {
+          let cell = document.createElement("td")
+          let input = document.createElement("input");
+          input.type = "text";
+          input.className = "TableInput";
+          input.id = "TableInputB";
+          input.name = "b2" + i;
+          input.placeholder = "B" + i;
+          cell.appendChild(input);
+          row.appendChild(cell);
+        }
+        tfoot.appendChild(row)
+        table.appendChild(tfoot)
+      }
+      table.appendChild(tfoor)
 }
 
 function UpdateTableau() {
   a = [0];
   b = [];
+  b2 = [];
   c = [0];
   k = [];
   for (i = 1; i <= s; i++) {
@@ -89,6 +105,10 @@ function UpdateTableau() {
       let ci = Fraction(document.getElementsByName("c" + i)[0].value)
       c.push(ci)
       a.push(ai)
+    }
+    if (isAdaptive == true) {
+      let b2i = Fraction(document.getElementsByName("b2" + i)[0].value)
+      b2.push(b2i)
     }
     let bi = Fraction(document.getElementsByName("b" + i)[0].value)
     b.push(bi)
@@ -109,6 +129,9 @@ function ChangeTableau(a,b,c) {
       document.getElementsByName("c" + i)[0].value = c[i-1]
     }
     document.getElementsByName("b" + i)[0].value = b[i-1]
+    if (isAdaptive == true) {
+      document.getElementsByName("b2" + i)[0].value = b2[i-1]
+    }
   }
 }
 
@@ -144,6 +167,18 @@ function CreateMethodTable() {
     button.className = "defbutton"
     button.id = "Imp"
     button.innerHTML = fullimpmethod[i]
+    cell.appendChild(button)
+    row.appendChild(cell)
+  }
+  let adpmethod = []
+  let fulladpmethod = []
+  for (let i = 0; i < adpmethod.length; i++) {
+    let cell = document.createElement("td")
+    let button = document.createElement("button")
+    button.onclick = function() {TableauDef(adpmethod[i])}
+    button.className = "defbutton"
+    button.id = "Adp"
+    button.innerHTML = fulladpmethod[i]
     cell.appendChild(button)
     row.appendChild(cell)
   }
