@@ -4,6 +4,13 @@ body {
     align-items: center;
 }
 
+.Result {
+    font-size: 25px;
+    border: 1px solid black;
+    border-radius: 0px;
+    padding: 2px;
+}
+
 .Input {
     border: 1px solid black;
     border-radius: 3px;
