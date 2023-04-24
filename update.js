@@ -1,5 +1,4 @@
 var results = 0
-var test2 = "loading"
 var x0 = 0;
 var y0 = 0;
 var h = 0;
@@ -12,8 +11,6 @@ var k = [];
 
 window.setInterval(function(){
     document.getElementById("result").innerHTML = results
-    document.getElementById("test1").innerHTML = test2
-    document.getElementById("test2").innerHTML = k
 },75)
 
 function ToggleMethods() {

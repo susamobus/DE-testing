@@ -101,8 +101,8 @@ function ChangeTableau(a,b,c) {
 }
 
 function CreateMethodTable() {
-  let expmethod = ["RK4","RK3","3/8","MP","HRM","HM3","RM3","SP","FE"]
-  let fullexpmethod = ["RK4","RK3","3/8","Midpoint","Heun's/Ralston's","3rd order Heun","3rd order Ralston","Stability preserving","Forward Euler"]
+  let expmethod = ["RK4","RK3","3/8","MP","HM","RM","HM3","RM3","SP","FE"]
+  let fullexpmethod = ["RK4","RK3","3/8","Midpoint","Heun's","Ralston's","3rd order Heun","3rd order Ralston","Stability preserving","Forward Euler"]
   let methodtable = document.getElementById("table")
   let row = document.createElement("tr")
   let cell = document.createElement("td")
@@ -160,7 +160,12 @@ function TableauDef(def) {
     defa = [0,["1/2"]];
     defb = [0,1];
     defc = [0,"1/2"];
-  } else if (def == "HRM") {
+  } else if (def == "HM") {
+    s = 2;
+    defa = [0,[1]];
+    defb = ["1/2","1/2"];
+    defc = [0,1]
+  } else if (def == "RM") {
     s = 2;
     defa = [0,["2/3"]];
     defb = ["1/4","3/4"];
