@@ -1,4 +1,6 @@
 var results = 0
+var test2 = "loading"
+var test2 = "loading"
 var x0 = 0;
 var y0 = 0;
 var h = 0;
@@ -11,8 +13,8 @@ var k = [];
 
 window.setInterval(function(){
     document.getElementById("result").innerHTML = results
-    document.getElementById("test1").innerHTML = x0
-    document.getElementById("test2").innerHTML = y0
+    document.getElementById("test1").innerHTML = test1
+    document.getElementById("test2").innerHTML = test2
     s = document.getElementById("stage").value
     n = document.getElementById("step").value
     h = document.getElementById("stepsize").value
@@ -35,6 +37,7 @@ function Calculate() {
 function RK(f) {
     let x = x0;
     let y = y0;
+    test1 = y
     let sum = 0;
     let sum2 = 0;
     for (let i = 0; i < n; i++) {
@@ -46,6 +49,7 @@ function RK(f) {
             sum2 += b[j] * k[j]
         }
         y += h * sum2;
+        test2 = y
         x += h;
     }
     results = y
