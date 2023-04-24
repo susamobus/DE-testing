@@ -81,8 +81,9 @@ function CreateTableau() {
         }
         table.appendChild(tfoot)
         table.appendChild(row)
-      }
+      } else {
       table.appendChild(tfoot)
+      }
 }
 
 function UpdateTableau() {
