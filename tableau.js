@@ -135,8 +135,8 @@ function CreateMethodTable() {
     cell.appendChild(button)
     row.appendChild(cell)
   }
-  let impmethod = ["BE"]
-  let fullimpmethod = ["Backward Euler"]
+  let impmethod = ["BE","IM"]
+  let fullimpmethod = ["Backward Euler","Implicit Midpoint"]
   for (let i = 0; i < impmethod.length; i++) {
     let cell = document.createElement("td")
     let button = document.createElement("button")
@@ -209,6 +209,11 @@ function TableauDef(def) {
     defa = [[1]];
     defb = [1];
     defc = [1];
+  } else if (def == "IM") {
+    s = 1;
+    defa = [["1/2"]];
+    defb = [1];
+    defc = ["1/2"];
   }
   document.getElementById("stage").value = s;
   CreateTableau();
