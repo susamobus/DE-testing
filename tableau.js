@@ -9,9 +9,9 @@ function CreateTableau() {
         // Create input rows for coefficients
         for (let i = 1; i <= s; i++) {
           let row = document.createElement("tr");
-          for (let j = 1; j <= i; j++) {
+          for (let j = 0; j < i; j++) {
             let cell = document.createElement("td");
-            if (i == 1 && j == 1) {
+            if (i == 0 && j == 0) {
               let input = document.createElement("input");
               input.className = "TableInput";
               input.id = "TableInputC";
@@ -22,14 +22,14 @@ function CreateTableau() {
               let input = document.createElement("input");
               input.type = "text";
               input.className = "TableInput";
-              if (j == 1) {
+              if (j == 0) {
                 input.id = "TableInputC";
                 input.name = "c" + i;
                 input.placeholder = "c" + i;
               } else {
                 input.id = "TableInputA";
-                input.name = "a" + i + "," + (j-1);
-                input.placeholder = "a" + i + "," + (j-1);
+                input.name = "a" + i + "," + j;
+                input.placeholder = "a" + i + "," + j;
               }
               cell.appendChild(input)
             }
@@ -72,7 +72,7 @@ function UpdateTableau() {
   for (i = 1; i <= s; i++) {
     if (i > 1) {
       let ai = []
-      for (j = 1; j < s; j++) {
+      for (j = 1; j < i; j++) {
         let aij = document.getElementsByName("a" + i + "," + j)[0].value
         ai.push(aij)
       }
