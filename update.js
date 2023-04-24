@@ -6,6 +6,7 @@ var y0 = 0;
 var h = 0;
 var n = 0;
 var acc = 0;
+var target = 0;
 var s = 0;
 var c = [];
 var b = [];
@@ -46,7 +47,11 @@ function ToggleMethods() {
     }
     for (let i = 0; i < cells.length; i++) {
         if (cells[i].id == id2) {
-            cells[i].style.display = "block"
+            if (cells[i].innerHTML) {
+                cells[i].style.display = "inline"
+            } else {
+                cells[i].style.display = "block"
+            }
         } else {
             cells[i].style.display = "none"
         }
@@ -60,6 +65,10 @@ function Calculate() {
     h = Number(document.getElementById("stepsize").value)
     x0 = Number(document.getElementById("x0").value)
     y0 = Number(document.getElementById("y0").value)
+    if (isAdaptive == true) {
+        acc = Number(document.getElementById("threshold").value)
+        target = Number(document.getElementById("target").value)
+    }
     UpdateTableau()
     RK()
 }
