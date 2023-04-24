@@ -21,8 +21,7 @@ body {
     border-spacing: 0px;
     border: none;
     padding: 0px;
-    margin: 0px;
-    align-self: center;
+    margin: 1px auto;
 }
 
 .TableInput {
@@ -44,6 +43,7 @@ body {
 #TableInputC:focus {
     border: 1px solid black;
     border-radius: 0px;
+    margin: 0px;
     outline: none;
 }
 
