@@ -74,14 +74,14 @@ function UpdateTableau() {
     if (i > 1) {
       let ai = []
       for (j = 1; j < i; j++) {
-        let aij = document.getElementsByName("a" + i + "," + j)[0].value
+        let aij = Fraction(document.getElementsByName("a" + i + "," + j)[0].value)
         ai.push(aij)
       }
-      let ci = document.getElementsByName("c" + i)[0].value
+      let ci = Fraction(document.getElementsByName("c" + i)[0].value)
       c.push(ci)
       a.push(ai)
     }
-    let bi = document.getElementsByName("b" + i)[0].value
+    let bi = Fraction(document.getElementsByName("b" + i)[0].value)
     b.push(bi)
     k.push(0)
   }
