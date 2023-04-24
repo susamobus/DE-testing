@@ -1,5 +1,5 @@
 var results = 0
-var test2 = "loading"
+var test1 = "loading"
 var test2 = "loading"
 var x0 = 0;
 var y0 = 0;
