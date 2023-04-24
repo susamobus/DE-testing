@@ -33,7 +33,7 @@ body {
     font-size: 10px;
     border: 1px solid gray;
     border-radius: 0px;
-    padding: 0px;
+    padding: 1px;
     margin: 1px;
 }
 
@@ -129,7 +129,7 @@ body {
     font-size: 8px;
     color: black;
     background-color: lightgray;
-    padding: 2px;
+    padding: 1px;
     border: 1px solid black;
     height: 20px;
     width: 60px;
