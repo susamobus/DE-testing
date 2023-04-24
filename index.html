@@ -6,7 +6,7 @@
         <script type="text/javascript" src="tableau.js"></script>
         <script type="text/javascript" src="input.js"></script>
     </head>
-    <body>
+    <body onload="CreateMethodTable()">
         <span>Function: no input yet</span>
         <br><br>
         <span>x0: </span>
@@ -26,8 +26,6 @@
         <br><br>
         <table id="tableau" class="table"></table>
         <br>
-        <button onclick="CreateMethodTable()" class="button">Load Methods</button>
-        <br><br>
         <table id="table" class="MethodTable"></table>
         <br><br>
         <button onclick="CreateTableau()" class="button">Create Tableau</button>
