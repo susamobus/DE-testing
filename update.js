@@ -9,6 +9,7 @@ var c = [];
 var b = [];
 var a = [];
 var k = [];
+var FunctionInput = "";
 
 window.setInterval(function(){
     document.getElementById("result").innerHTML = results
@@ -39,6 +40,7 @@ function g(x,y) {
 }
 
 function Calculate() {
+    FunctionInput = document.getElementById("FunctionInput").value
     s = Number(document.getElementById("stage").value)
     n = Number(document.getElementById("step").value)
     h = Number(document.getElementById("stepsize").value)
@@ -73,7 +75,7 @@ function RK(f) {
             for (let l = 0; l < lm; l++) {
                 sum += a[j][l] * k[l]
             }
-            k[j] = f(x + c[j] * h, y + h * sum)
+            k[j] = evaluateFunction(FunctionInput,x + c[j] * h, y + h * sum)
             sum2 += b[j] * k[j]
         }
         y += h * sum2;
