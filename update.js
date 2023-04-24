@@ -26,9 +26,9 @@ window.setInterval(function(){
     document.getElementById("result").innerHTML = results
     s = document.getElementById("stage").value
     //test
-    document.getElementById("a").innerHTML = document.getElementsByName("a2,1")[0].value + a
-    document.getElementById("b").innerHTML = document.getElementsByName("b2")[0].value + b
-    document.getElementById("c").innerHTML = document.getElementsByName("c2")[0].value + c
+    document.getElementById("a").innerHTML = document.getElementsByName("a2,1")[0].value
+    document.getElementById("b").innerHTML = document.getElementsByName("b2")[0].value
+    document.getElementById("c").innerHTML = document.getElementsByName("c2")[0].value
 },50)
 
 function g(x,y) {
