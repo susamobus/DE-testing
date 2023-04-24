@@ -9,25 +9,27 @@
     <body onload="CreateMethodTable()">
         <span>Function: </span>
         <input type="text" id="FunctionInput" class="Input">
-        <br><br>
+        <br>
         <span>x0: </span>
         <input type="number" id="x0" class="Input">
-        <br><br>
+        <br>
         <span>y0: </span>
         <input type="number" id="y0" class="Input">
-        <br><br>
+        <br>
         <span>Stepsize: </span>
         <input type="number" id="stepsize" class="Input">
-        <br><br>
+        <br>
         <span>Steps: </span>
         <input type="number" id="step" class="Input">
-        <br><br>
-        <span>Number of Stages: </span>
-        <input type="number" id="stage" name="stage" class="Input">
-        <br><br>
+        <br>
+        <span class="Title">Butcher's Tableau</span>
+        <br>
         <table id="tableau" class="table"></table>
         <br>
         <table id="table" class="MethodTable"></table>
+        <br>
+        <span>Number of Stages: </span>
+        <input type="number" id="stage" name="stage" class="Input">
         <br><br>
         <button onclick="CreateTableau()" class="button">Create Tableau</button>
         <br><br>

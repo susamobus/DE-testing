@@ -5,10 +5,14 @@ body {
 }
 
 .Result {
-    font-size: 25px;
+    font-size: 30px;
     border: 1px solid black;
     border-radius: 0px;
     padding: 2px;
+}
+
+.Title {
+    font-size: 25px;
 }
 
 .Input {
