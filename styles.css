@@ -1,5 +1,5 @@
 body {
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     align-items: center;
 }
@@ -65,7 +65,7 @@ body {
 }
 
 .button {
-    font-size: 15px;
+    font-size: 10px;
     color: black;
     background-color: lightgray;
     padding: 5px;
@@ -75,11 +75,11 @@ body {
 }
 
 .defbutton {
-    font-size: 10px;
+    font-size: 8px;
     color: black;
     background-color: lightslategrey;
     padding: 2px;
     border: 1px solid black;
-    height: 40px;
-    width: 120px;
+    height: 35px;
+    width: 100px;
 }
