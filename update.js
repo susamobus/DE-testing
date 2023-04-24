@@ -1,4 +1,5 @@
 var results = 0
+var isImplicit = false;
 var x0 = 0;
 var y0 = 0;
 var h = 0;
@@ -16,11 +17,13 @@ window.setInterval(function(){
 function ToggleMethods() {
     let id = "Exp"
     var tabs = document.getElementsByClassName("defbutton") 
-    if (document.getElementsByClassName("maindefbutton")[0].innerHTML == "Adaptive") {
-        document.getElementsByClassName("maindefbutton")[0].innerHTML = "Explicit"
-        id = "Adapt"
+    if (isImplicit == false) {
+        document.getElementsByClassName("maindefbutton")[0].innerHTML = "Implicit"
+        isImplicit = true
+        id = "Imp"
     } else {
-        document.getElementsByClassName("maindefbutton")[0].innerHTML = "Adaptive"
+        document.getElementsByClassName("maindefbutton")[0].innerHTML = "Explicit"
+        isImplicit = false
     }
     for (let i = 0; i < tabs.length; i++) {
         if (tabs[i].id == id) {

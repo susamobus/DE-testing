@@ -10,7 +10,11 @@ function CreateTableau() {
         // Create input rows for coefficients
         for (let i = 1; i <= s; i++) {
           let row = document.createElement("tr");
-          for (let j = 0; j < i; j++) {
+          let im = i
+          if (isImplicit == true) {
+            im = s
+          }
+          for (let j = 0; j < im; j++) {
             let cell = document.createElement("td");
             if (i == 1 && j == 0) {
               let input = document.createElement("input");
@@ -74,7 +78,11 @@ function UpdateTableau() {
   for (i = 1; i <= s; i++) {
     if (i > 1) {
       let ai = []
-      for (j = 1; j < i; j++) {
+      let im = i
+      if (isImplicit == true) {
+        im = s
+      }
+      for (j = 1; j < im; j++) {
         let aij = Fraction(document.getElementsByName("a" + i + "," + j)[0].value)
         ai.push(aij)
       }
@@ -91,6 +99,10 @@ function UpdateTableau() {
 function ChangeTableau(a,b,c) {
   for (i = 1; i <= s; i++) {
     if (i > 1) {
+      let im = i
+      if (isImplicit == true) {
+        im = s
+      }
       for (j = 1; j < i; j++) {
         document.getElementsByName("a" + i + "," + j)[0].value = a[i-1][j-1]
       }
@@ -108,7 +120,7 @@ function CreateMethodTable() {
   let cell = document.createElement("td")
   let mainbutton = document.createElement("button")
   mainbutton.onclick = function() {ToggleMethods()}
-  mainbutton.innerHTML = "Adaptive"
+  mainbutton.innerHTML = "Explicit"
   mainbutton.className = "maindefbutton"
   cell.appendChild(mainbutton)
   row.appendChild(cell)
@@ -128,7 +140,7 @@ function CreateMethodTable() {
     let cell = document.createElement("td")
     let button = document.createElement("button")
     button.className = "defbutton"
-    button.id = "Adapt"
+    button.id = "Imp"
     button.innerHTML = adpmethod[i]
     cell.appendChild(button)
     row.appendChild(cell)
