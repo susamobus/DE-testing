@@ -268,5 +268,4 @@ function TableauDef(def) {
   document.getElementById("stage").value = s;
   CreateTableau();
   ChangeTableau(defa,defb,defc);
-  UpdateTableau();
 }
