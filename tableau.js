@@ -43,6 +43,36 @@ function CreateTableau() {
           table.appendChild(row);
         }
       
+        if (isAdaptive == true) {
+        for (let i = 1; i <= 2; i++) {
+        let row = document.createElement("tr");
+        let cell = document.createElement("td")
+        let input = document.createElement("input")
+        input.className = "TableInput";
+        input.disabled = "true";
+        input.id = "TableInputC";
+        cell.appendChild(input)
+        row.appendChild(cell)
+          for (let j = 1; j <= s; j++) {
+            let cell = document.createElement("td")
+            let input = document.createElement("input");
+            input.type = "text";
+            input.className = "TableInput";
+            input.id = "TableInputB";
+            if (i == 1) {
+              input.name = "b" + j;
+              input.placeholder = "b" + j;
+            } else {
+              input.name = "b2" + j;
+              input.placeholder = "B" + j;
+            }
+            cell.appendChild(input);
+            row.appendChild(cell);
+          }
+          table.appendChild(row)
+        }
+        } else {
+
         // Create input row 
         let tfoot = document.createElement("tfoot")
         let row = document.createElement("tr");
@@ -66,24 +96,9 @@ function CreateTableau() {
           row.appendChild(cell);
         }
         tfoot.appendChild(row)
-
-        if (isAdaptive == true) {
-          for (let i = 1; i <= s; i++) {
-          let cell = document.createElement("td")
-          let input = document.createElement("input");
-          input.type = "text";
-          input.className = "TableInput";
-          input.id = "TableInputB";
-          input.name = "b2" + i;
-          input.placeholder = "B" + i;
-          cell.appendChild(input);
-          row.appendChild(cell);
         }
-        table.appendChild(tfoot)
-        table.appendChild(row)
-      } else {
+
       table.appendChild(tfoot)
-      }
 }
 
 function UpdateTableau() {
