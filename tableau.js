@@ -51,6 +51,9 @@ function CreateTableau() {
         input.className = "TableInput";
         input.disabled = "true";
         input.id = "TableInputC";
+        if (i == 1) {
+          input.style.borderTop = "1px solid black"
+        }
         cell.appendChild(input)
         row.appendChild(cell)
           for (let j = 1; j <= s; j++) {
