@@ -18,7 +18,6 @@ function RK() {
         sum = 0
         sum2 = 0
         sum3 = 0
-        e = 0
         for (let j = 0; j < s; j++) {
             for (let l = 0; l < j; l++) {
                 sum += a[j][l] * k[l]
@@ -32,9 +31,9 @@ function RK() {
         y2 += h * sum3
         x += h;
         if (y-y2 >= acc) {
-            h /= e
+            h /= (y-y2)
         } else {
-            h *= e
+            h *= (y-y2)
         }
     } else {
     if (isImplicit == true) {
