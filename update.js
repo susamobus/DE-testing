@@ -20,6 +20,7 @@ window.setInterval(function(){
 },75)
 
 function ToggleMethods() {
+    DeleteTableau()
     let id = "Exp"
     var tabs = document.getElementsByClassName("defbutton") 
     if (isImplicit == false && isAdaptive == false) {

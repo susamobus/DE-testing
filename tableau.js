@@ -2,10 +2,7 @@ function CreateTableau() {
   s = Number(document.getElementById("stage").value)
   let table = document.getElementById("tableau");
 
-    // Delete previous table
-    while (table.hasChildNodes()) {
-        table.removeChild(table.firstChild);
-    }
+  DeleteTableau()
 
         // Create input rows for coefficients
         for (let i = 1; i <= s; i++) {
@@ -79,6 +76,14 @@ function CreateTableau() {
         }
 
 }
+
+function DeleteTableau() {
+  let table = document.getElementById("tableau");
+  while (table.hasChildNodes()) {
+      table.removeChild(table.firstChild);
+  }
+}
+
 
 function UpdateTableau() {
   a = [0];
