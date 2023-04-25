@@ -79,6 +79,7 @@ function RK() {
     let n2 = n
     if (isAdaptive == true) {
         while (target-x > 0) {
+        h = 1
         sum = 0
         sum2 = 0
         sum3 = 0
@@ -96,9 +97,9 @@ function RK() {
         y2 += h * sum3
         x += h;
         if (y-y2 >= acc) {
-            // Decrease h
+            h /= e
         } else {
-            // Increase h
+            h *= e
         }
     } else {
     if (isImplicit == true) {
