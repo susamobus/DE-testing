@@ -58,8 +58,9 @@ function CreateTableau() {
             let input = document.createElement("input");
             input.type = "text";
             input.className = "TableInput";
-            input.id = "TableInputB";
+            input.id = "TableInputb";
             if (i == 1) {
+              input.id = "TableInputB"
               input.name = "b" + j;
               input.placeholder = "b" + j;
             } else {
@@ -89,16 +90,15 @@ function CreateTableau() {
           let input = document.createElement("input");
           input.type = "text";
           input.className = "TableInput";
-          input.id = "TableInputB";
+          input.id = "TableInputb";
           input.name = "b" + i;
           input.placeholder = "b" + i;
           cell.appendChild(input);
           row.appendChild(cell);
         }
         tfoot.appendChild(row)
+        table.appendChild(tfoot)
         }
-
-      table.appendChild(tfoot)
 }
 
 function UpdateTableau() {

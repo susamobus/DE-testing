@@ -98,6 +98,13 @@ body {
     outline: none;
 }
 
+#TableInputB:focus-visible {
+    border: 1px solid black;
+    border-radius: 0px;
+    margin: 0px;
+    outline: none;
+}
+
 .table tfoot tr{
     border-top: 1px solid black;
 }
@@ -111,7 +118,20 @@ body {
     border-right: 1px solid black;
     border-radius: 0px;
     font-size: 10px;
-    margin: 0px;
+    margin: 1px;
+    padding: 0px;
+}
+
+#TableInputB {
+    width: 60px;
+    height: 20px;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid black;
+    border-radius: 0px;
+    font-size: 10px;
+    margin: 1px;
     padding: 0px;
 }
 
