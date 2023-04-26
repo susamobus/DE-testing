@@ -13,8 +13,8 @@ function RK() {
     let sum3 = 0;
     let n2 = n
     if (isAdaptive == true) {
-        while (target-x > 0) {
         h = (target-x0)/10
+        while (target-x > 0) {
         sum = 0
         sum2 = 0
         sum3 = 0
