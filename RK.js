@@ -31,10 +31,14 @@ function RK() {
         y2 += h * sum3
         x += h;
         if (y-y2 >= acc) {
+            // Decrease h
             h /= (y-y2)
         } else {
+            // Increase h
             h *= (y-y2)
         }
+        // y? y2? Average?
+        results = y
     } else {
     if (isImplicit == true) {
         n2 = n+1
