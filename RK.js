@@ -14,7 +14,7 @@ function RK() {
     let n2 = n
     if (isAdaptive == true) {
         while (target-x > 0) {
-        h = 1
+        h = (target-x0)/10
         sum = 0
         sum2 = 0
         sum3 = 0
