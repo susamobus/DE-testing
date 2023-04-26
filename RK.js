@@ -23,14 +23,14 @@ function RK() {
                 sum += a[j][l] * k[l]
             }
             k[j] = evaluateFunction(FunctionInput,x + c[j] * h, y + h * sum)
-            sum3 += b2[j] * j[j]
+            sum3 += b2[j] * k[j]
             sum2 += b[j] * k[j]
         }
         }
         y += h * sum2;
         y2 += h * sum3
         x += h;
-        if (y-y2 >= acc) {
+        if (y-y2 > acc) {
             // Decrease h
             h /= (y-y2)
         } else {
