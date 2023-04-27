@@ -116,7 +116,7 @@ function UpdateTableau() {
   }
 }
 
-function ChangeTableau(a,b,c) {
+function ChangeTableau(a,b,c,b2) {
   for (i = 1; i <= s; i++) {
     if (i > 1 || isImplicit == true) {
       let im = i
@@ -170,8 +170,8 @@ function CreateMethodTable() {
     cell.appendChild(button)
     row.appendChild(cell)
   }
-  let adpmethod = []
-  let fulladpmethod = []
+  let adpmethod = ["RKF"]
+  let fulladpmethod = ["Runge-Kutta-Fehlberg"]
   for (let i = 0; i < adpmethod.length; i++) {
     let cell = document.createElement("td")
     let button = document.createElement("button")
@@ -189,6 +189,7 @@ function TableauDef(def) {
   var defa;
   var defb;
   var defc;
+  var defb2;
   if (def == "RK4") {
     s = 4;
     defa = [0,["1/2"],[0,"1/2"],[0,0,1]];
@@ -264,8 +265,18 @@ function TableauDef(def) {
     defa = [["1/4",0],["1/4","1/2"]];
     defb = ["1/2","1/2"];
     defc = ["1/4","3/4"];
+  } else if (def == "RKF") {
+    s = 5;
+    defa = [0,["1/4"],["3/32","9/32"],["1932/2197","-7200/2197","7296/2197"],["439/216",-8,"3680/513","-845/4104"],["-8/27",2,"-3544/2565","1859/4104","-11/40"]]
+    defb = ["16/135",0,"6656/12825","28561/56430","-9/50","2/55"];
+    defc = [0,"1/4","3/8","12/13",1,"1/2"];
+    defb2 = ["25/216",0,"1408/2565","2197/4104",'-1/5',0]
   }
   document.getElementById("stage").value = s;
   CreateTableau();
-  ChangeTableau(defa,defb,defc);
+  if (isAdaptive == true) {
+    ChangeTableau(defa,defb,defc,defb2)
+  } else {
+    ChangeTableau(defa,defb,defc,0)
+  }
 }
