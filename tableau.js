@@ -146,7 +146,7 @@ function CreateMethodTable() {
         let button = document.createElement("button")
         button.id = "AdpImp"
         button.className = "defbutton"
-        button.onclick = function() {TableauDef(adpimpmethod["AI" + i])}
+        button.onclick = function() {TableauDef("AI" + i)}
         button.innerHTML = adpimpmethod[i]
         cell.appendChild(button)
         row.appendChild(cell)
@@ -158,7 +158,7 @@ function CreateMethodTable() {
         let button = document.createElement("button")
         button.id = "Adp"
         button.className = "defbutton"
-        button.onclick = function() {TableauDef(adpmethod["A" + i])}
+        button.onclick = function() {TableauDef("A" + i)}
         button.innerHTML = adpmethod[i]
         cell.appendChild(button)
         row.appendChild(cell)
@@ -171,7 +171,7 @@ function CreateMethodTable() {
       let button = document.createElement("button")
       button.id = "Imp"
       button.className = "defbutton"
-      button.onclick = function() {TableauDef(impmethod["I" + i])}
+      button.onclick = function() {TableauDef("I" + i)}
       button.innerHTML = impmethod[i]
       cell.appendChild(button)
       row.appendChild(cell)
@@ -183,7 +183,7 @@ function CreateMethodTable() {
       let button = document.createElement("button")
       button.id = "Exp"
       button.className = "defbutton"
-      button.onclick = function() {TableauDef(expmethod["E" + i])}
+      button.onclick = function() {TableauDef("E" + i)}
       button.innerHTML = expmethod[i]
       cell.appendChild(button)
       row.appendChild(cell)
