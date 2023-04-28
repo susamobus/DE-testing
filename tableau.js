@@ -141,54 +141,50 @@ function CreateMethodTable() {
   if (isAdaptive == true) {
     if (isImplicit == true) {
       let adpimpmethod = []
-      let fulladpimpmethod = []
       for (let i = 0; i < adpimpmethod.length; i++) {
         let cell = document.createElement("td")
         let button = document.createElement("button")
         button.id = "AdpImp"
         button.className = "defbutton"
-        button.onclick = function() {TableauDef(adpimpmethod[i])}
-        button.innerHTML = fulladpimpmethod[i]
+        button.onclick = function() {TableauDef(adpimpmethod["AI" + i])}
+        button.innerHTML = adpimpmethod[i]
         cell.appendChild(button)
         row.appendChild(cell)
       }
     } else {
-      let adpmethod = ["RKF","HE"]
       let fulladpmethod = ["Runge-Kutta-Fehlberg","Heun-Euler"]
       for (let i = 0; i < adpmethod.length; i++) {
         let cell = document.createElement("td")
         let button = document.createElement("button")
         button.id = "Adp"
         button.className = "defbutton"
-        button.onclick = function() {TableauDef(adpmethod[i])}
-        button.innerHTML = fulladpmethod[i]
+        button.onclick = function() {TableauDef(adpmethod["A" + i])}
+        button.innerHTML = adpmethod[i]
         cell.appendChild(button)
         row.appendChild(cell)
       }
     }
   } else if (isImplicit == true) {
-    let impmethod = ["BE","IM","CN","KS","QZ"]
-    let fullimpmethod = ["Backward Euler","Implicit Midpoint","Crank-Nicolson","Kraaijevanger-Spijker","Qin-Zhang"]
+    let impmethod = ["Backward Euler","Implicit Midpoint","Crank-Nicolson","Kraaijevanger-Spijker","Qin-Zhang"]
     for (let i = 0; i < impmethod.length; i++) {
       let cell = document.createElement("td")
       let button = document.createElement("button")
       button.id = "Imp"
       button.className = "defbutton"
-      button.onclick = function() {TableauDef(impmethod[i])}
-      button.innerHTML = fullimpmethod[i]
+      button.onclick = function() {TableauDef(impmethod["I" + i])}
+      button.innerHTML = impmethod[i]
       cell.appendChild(button)
       row.appendChild(cell)
     }
   } else {
-    let expmethod = ["RK4","RK3","3/8","MP","HM","RM","HM3","RM3","SP","FE"]
-    let fullexpmethod = ["RK4","RK3","3/8","Midpoint","Heun's","Ralston's","3rd order Heun","3rd order Ralston","Stability preserving","Forward Euler"]
+    let expmethod = ["RK4","RK3","3/8","Midpoint","Heun's","Ralston's","3rd order Heun","3rd order Ralston","Stability preserving","Forward Euler"]
     for (let i = 0; i < expmethod.length; i++) {
       let cell = document.createElement("td")
       let button = document.createElement("button")
       button.id = "Exp"
       button.className = "defbutton"
-      button.onclick = function() {TableauDef(expmethod[i])}
-      button.innerHTML = fullexpmethod[i]
+      button.onclick = function() {TableauDef(expmethod["E" + i])}
+      button.innerHTML = expmethod[i]
       cell.appendChild(button)
       row.appendChild(cell)
     }
@@ -201,94 +197,114 @@ function TableauDef(def) {
   var defb;
   var defc;
   var defb2;
-  if (def == "RK4") {
+  switch (def) {
+  case "E0":
     s = 4;
     defa = [0,["1/2"],[0,"1/2"],[0,0,1]];
     defb = ["1/6","1/3","1/3","1/6"];
     defc = [0,"1/2","1/2",1];
-  } else if (def == "RK3") {
+    break;
+  case "E1":
     s = 3;
     defa = [0,["1/2"],[-1,2]];
     defb = ["1/6","2/3","1/6"];
     defc = [0,"1/2",1];
-  } else if (def == "3/8") {
+  break;
+  case "E2":
     s = 4;
     defa = [0,["1/3"],["-1/3",1],[1,-1,1]];
     defb = ["1/8","3/8","3/8","1/8"];
     defc = [0,"1/3","2/3",1];
-  } else if (def == "MP") {
+    break;
+  case "E3":
     s = 2;
     defa = [0,["1/2"]];
     defb = [0,1];
     defc = [0,"1/2"];
-  } else if (def == "HM") {
+    break;
+  case "E4":
     s = 2;
     defa = [0,[1]];
     defb = ["1/2","1/2"];
-    defc = [0,1]
-  } else if (def == "RM") {
+    defc = [0,1];
+    break;
+  case "E5":
     s = 2;
     defa = [0,["2/3"]];
     defb = ["1/4","3/4"];
-    defc = [0,"2/3"]
-  } else if (def == "HM3") {
+    defc = [0,"2/3"];
+    break;
+  case "E6":
     s = 3;
     defa = [0,["1/3"],[0,"2/3"]];
     defb = ["1/4",0,"3/4"];
     defc = [0,"1/3","2/3"];
-  } else if (def == "RM3") {
+    break;
+  case "E7":
     s = 3;
     defa = [0,["1/2"],[0,"3/4"]];
     defb = ["2/9","1/3","4/9"];
     defc = [0,"1/2","3/4"];
-  } else if (def == "SP") {
+    break;
+  case "E8":
     s = 3;
     defa = [0,[1],["1/4","1/4"]];
     defb = ["1/6","1/6","2/3"];
     defc = [0,1,"1/2"];
-  } else if (def == "FE") {
+    break;
+  case "E9":
     s = 1;
     defa = [0];
     defb = [1];
     defc = [0];
-  } else if (def == "BE") {
+    break;
+  case "I0":
     s = 1;
     defa = [[1]];
     defb = [1];
     defc = [1];
-  } else if (def == "IM") {
+    break;
+  case "I1":
     s = 1;
     defa = [["1/2"]];
     defb = [1];
     defc = ["1/2"];
-  } else if (def == "CN") {
+    break;
+  case "I2":
     s = 2;
     defa = [[0,0],["1/2","1/2"]];
     defb = ["1/2","1/2"];
     defc = [0,1];
-  } else if (def == "KS") {
+    break;
+  case "I3":
     s = 2;
     defa = [["1/2",0],["-1/2",2]];
     defb = ["-1/2","3/2"];
-    defc = ["1/2","3/2"]
-  } else if (def == "QZ") {
+    defc = ["1/2","3/2"];
+    break;
+  case "I4":
     s = 2;
     defa = [["1/4",0],["1/4","1/2"]];
     defb = ["1/2","1/2"];
     defc = ["1/4","3/4"];
-  } else if (def == "RKF") {
+    break;
+  case "A0":
     s = 6;
     defa = [0,["1/4"],["3/32","9/32"],["1932/2197","-7200/2197","7296/2197"],["439/216",-8,"3680/513","-845/4104"],["-8/27",2,"-3544/2565","1859/4104","-11/40"]]
     defb = ["16/135",0,"6656/12825","28561/56430","-9/50","2/55"];
     defc = [0,"1/4","3/8","12/13",1,"1/2"];
-    defb2 = ["25/216",0,"1408/2565","2197/4104",'-1/5',0]
-  } else if (def == "HE") {
+    defb2 = ["25/216",0,"1408/2565","2197/4104",'-1/5',0];
+    break;
+  case "A1":
     s = 2;
     defa = [0,[1]];
     defb = ["1/2","1/2"];
     defc = [0,1];
     defb2 = [1,0];
-  }
+    break;
+  default:
+  break;
+}
   document.getElementById("stage").value = s;
   CreateTableau();
   if (isAdaptive == true) {
