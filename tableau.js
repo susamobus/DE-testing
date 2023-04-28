@@ -153,8 +153,8 @@ function CreateMethodTable() {
         row.appendChild(cell)
       }
     } else {
-      let adpmethod = ["RKF"]
-      let fulladpmethod = ["Runge-Kutta-Fehlberg"]
+      let adpmethod = ["RKF","HE"]
+      let fulladpmethod = ["Runge-Kutta-Fehlberg","Heun-Euler"]
       for (let i = 0; i < adpmethod.length; i++) {
         let cell = document.createElement("td")
         let button = document.createElement("button")
@@ -282,6 +282,12 @@ function TableauDef(def) {
     defb = ["16/135",0,"6656/12825","28561/56430","-9/50","2/55"];
     defc = [0,"1/4","3/8","12/13",1,"1/2"];
     defb2 = ["25/216",0,"1408/2565","2197/4104",'-1/5',0]
+  } else if (def == "HE") {
+    s = 2;
+    defa = [0,[1]];
+    defb = ["1/2","1/2"];
+    defc = [0,1];
+    defb2 = [1,0];
   }
   document.getElementById("stage").value = s;
   CreateTableau();
