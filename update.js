@@ -20,7 +20,8 @@ window.setInterval(function(){
 },75)
 
 function ChangeMethod() {
-    DeleteTableau()
+    DeleteTable("tableau")
+    DeleteTable("table")
     isAdaptive = document.getElementById("AdaptiveInput").checked;
     isImplicit = document.getElementById("ImplicitInput").checked;
     if (isAdaptive == true) {
