@@ -152,7 +152,7 @@ function CreateMethodTable() {
         row.appendChild(cell)
       }
     } else {
-      let fulladpmethod = ["Runge-Kutta-Fehlberg","Heun-Euler"]
+      let adpmethod = ["Runge-Kutta-Fehlberg","Heun-Euler","Bogacki-Shampine"]
       for (let i = 0; i < adpmethod.length; i++) {
         let cell = document.createElement("td")
         let button = document.createElement("button")
@@ -301,6 +301,13 @@ function TableauDef(def) {
     defb = ["1/2","1/2"];
     defc = [0,1];
     defb2 = [1,0];
+    break;
+  case "A2":
+    s = 4;
+    defa = [0,["1/2"],[0,"3/4"],["2/9","1/3","4/9"]];
+    defb = ["2/9","1/3","4/9",0];
+    defc = [0,"1/2","3/4",1];
+    defb2 = ["7/24","1/4","1/3","1/8"];
     break;
   default:
   break;
