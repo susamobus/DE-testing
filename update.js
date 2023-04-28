@@ -22,24 +22,27 @@ window.setInterval(function(){
 function ChangeMethod() {
     DeleteTableau()
     isAdaptive = document.getElementById("AdaptiveInput").checked;
-    isImplicit = document.getElementById("ImplicitInput").checked
+    isImplicit = document.getElementById("ImplicitInput").checked;
     if (isAdaptive == true) {
         document.getElementById("stepsizedisp").innerHTML = "Target: "
         document.getElementById("stepsdisp").innerHTML = "Threshold: "
-        Tab("defbutton","Adp")
+        if (isImplicit == true) {
+            // AdpImp
+        } else {
+            Tab("defbutton","Adp")
+        }
     } else {
         document.getElementById("stepsizedisp").innerHTML = "Stepsize: "
         document.getElementById("stepsdisp").innerHTML = "Steps: "
-        Tab("defbutton","Exp")
-    }
-    if (isImplicit == true) {
-        Tab("defbutton","Imp")
-    } else {
-        Tab("defbutton","Exp")
+        if (isImplicit == true) {
+            Tab("defbutton","Imp")
+        } else {
+            Tab("defbutton","Exp")
+        }
     }
 }
 
-function Tab(name, id) {
+function Tab(name,id) {
     var tabs = document.getElementsByClassName(name) 
     for (let i = 0; i < tabs.length; i++) {
         if (tabs[i].id == id) {
