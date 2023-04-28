@@ -27,7 +27,7 @@ function ChangeMethod() {
         document.getElementById("stepsizedisp").innerHTML = "Target: "
         document.getElementById("stepsdisp").innerHTML = "Threshold: "
         if (isImplicit == true) {
-            // AdpImp
+            Tab("defbutton","AdpImp")
         } else {
             Tab("defbutton","Adp")
         }
