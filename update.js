@@ -19,27 +19,33 @@ window.setInterval(function(){
     document.getElementById("result").innerHTML = results
 },75)
 
-function ToggleMethods() {
-    DeleteTableau()
-    let id = "Exp"
-    var tabs = document.getElementsByClassName("defbutton") 
-    if (isImplicit == false && isAdaptive == false) {
-        document.getElementsByClassName("maindefbutton")[0].innerHTML = "Implicit"
-        isImplicit = true
-        id = "Imp"
-    } else if (isAdaptive == false) {
-        document.getElementsByClassName("maindefbutton")[0].innerHTML = "Adaptive (Soon)"
+let AdaptiveInput = document.getElementById("AdaptiveInput");
+AdaptiveInput.addEventListener("click", () => {
+    isAdaptive = AdaptiveInput.checked;
+    if (isAdaptive == true) {
         document.getElementById("stepsizedisp").innerHTML = "Target: "
         document.getElementById("stepsdisp").innerHTML = "Threshold: "
-        isImplicit = false
-        isAdaptive = true
-        id = "Adp"
+        ToggleMethods("Adp")
     } else {
-        document.getElementsByClassName("maindefbutton")[0].innerHTML = "Explicit"
         document.getElementById("stepsizedisp").innerHTML = "Stepsize: "
         document.getElementById("stepsdisp").innerHTML = "Steps: "
-        isAdaptive = false
+        ToggleMethods("Exp")
     }
+});
+
+let ImplicitInput = document.getElementById("ImplicitInput");
+ImplicitInput.addEventListener("click", () => {
+    isImplicit = ImplicitInput.checked
+    if (isImplicit == true) {
+        ToggleMethods("Imp")
+    } else {
+        ToggleMethods("Exp")
+    }
+});
+
+function ToggleMethods(id) {
+    DeleteTableau()
+    var tabs = document.getElementsByClassName("defbutton") 
     for (let i = 0; i < tabs.length; i++) {
         if (tabs[i].id == id) {
             tabs[i].style.display = "block"

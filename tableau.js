@@ -140,13 +140,6 @@ function CreateMethodTable() {
   let fullexpmethod = ["RK4","RK3","3/8","Midpoint","Heun's","Ralston's","3rd order Heun","3rd order Ralston","Stability preserving","Forward Euler"]
   let methodtable = document.getElementById("table")
   let row = document.createElement("tr")
-  let cell = document.createElement("td")
-  let mainbutton = document.createElement("button")
-  mainbutton.onclick = function() {ToggleMethods()}
-  mainbutton.innerHTML = "Explicit"
-  mainbutton.className = "maindefbutton"
-  cell.appendChild(mainbutton)
-  row.appendChild(cell)
   for (let i = 0; i < expmethod.length; i++) {
     let cell = document.createElement("td")
     let button = document.createElement("button")
