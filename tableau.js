@@ -140,7 +140,18 @@ function CreateMethodTable() {
   let row = document.createElement("tr");
   if (isAdaptive == true) {
     if (isImplicit == true) {
-      //
+      let adpimpmethod = []
+      let fulladpimpmethod = []
+      for (let i = 0; i < adpimpmethod.length; i++) {
+        let cell = document.createElement("td")
+        let button = document.createElement("button")
+        button.id = "AdpImp"
+        button.className = "defbutton"
+        button.onclick = function() {TableauDef(adpimpmethod[i])}
+        button.innerHTML = fulladpimpmethod[i]
+        cell.appendChild(button)
+        row.appendChild(cell)
+      }
     } else {
       let adpmethod = ["RKF"]
       let fulladpmethod = ["Runge-Kutta-Fehlberg"]
