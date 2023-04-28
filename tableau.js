@@ -136,44 +136,46 @@ function ChangeTableau(a,b,c,b2) {
 }
 
 function CreateMethodTable() {
-  let expmethod = ["RK4","RK3","3/8","MP","HM","RM","HM3","RM3","SP","FE"]
-  let fullexpmethod = ["RK4","RK3","3/8","Midpoint","Heun's","Ralston's","3rd order Heun","3rd order Ralston","Stability preserving","Forward Euler"]
-  let methodtable = document.getElementById("table")
-  let row = document.createElement("tr")
-  for (let i = 0; i < expmethod.length; i++) {
-    let cell = document.createElement("td")
-    let button = document.createElement("button")
-    button.onclick = function() {TableauDef(expmethod[i])}
-    button.className = "defbutton"
-    button.id = "Exp"
-    button.style.display = "block"
-    button.innerHTML = fullexpmethod[i]
-    cell.appendChild(button)
-    row.appendChild(cell)
-  }
-  let impmethod = ["BE","IM","CN","KS","QZ"]
-  let fullimpmethod = ["Backward Euler","Implicit Midpoint","Crank-Nicolson","Kraaijevanger-Spijker","Qin-Zhang"]
-  for (let i = 0; i < impmethod.length; i++) {
-    let cell = document.createElement("td")
-    let button = document.createElement("button")
-    button.onclick = function() {TableauDef(impmethod[i])}
-    button.className = "defbutton"
+  let methodtable = document.getElementById("table");
+  let row = document.createElement("tr");
+  let cell = document.createElement("td");
+  let button = document.createElement("button");
+  button.className = "defbutton";
+
+  if (isAdaptive == true) {
+    if (isImplicit == true) {
+      //
+    } else {
+      let adpmethod = ["RKF"]
+      let fulladpmethod = ["Runge-Kutta-Fehlberg"]
+      button.id = "Adp"
+      for (let i = 0; i < adpmethod.length; i++) {
+        button.onclick = function() {TableauDef(adpmethod[i])}
+        button.innerHTML = fulladpmethod[i]
+        cell.appendChild(button)
+        row.appendChild(cell)
+      }
+    }
+  } else if (isImplicit == true) {
+    let impmethod = ["BE","IM","CN","KS","QZ"]
+    let fullimpmethod = ["Backward Euler","Implicit Midpoint","Crank-Nicolson","Kraaijevanger-Spijker","Qin-Zhang"]
     button.id = "Imp"
-    button.innerHTML = fullimpmethod[i]
-    cell.appendChild(button)
-    row.appendChild(cell)
-  }
-  let adpmethod = ["RKF"]
-  let fulladpmethod = ["Runge-Kutta-Fehlberg"]
-  for (let i = 0; i < adpmethod.length; i++) {
-    let cell = document.createElement("td")
-    let button = document.createElement("button")
-    button.onclick = function() {TableauDef(adpmethod[i])}
-    button.className = "defbutton"
-    button.id = "Adp"
-    button.innerHTML = fulladpmethod[i]
-    cell.appendChild(button)
-    row.appendChild(cell)
+    for (let i = 0; i < impmethod.length; i++) {
+      button.onclick = function() {TableauDef(impmethod[i])}
+      button.innerHTML = fullimpmethod[i]
+      cell.appendChild(button)
+      row.appendChild(cell)
+    }
+  } else {
+    let expmethod = ["RK4","RK3","3/8","MP","HM","RM","HM3","RM3","SP","FE"]
+    let fullexpmethod = ["RK4","RK3","3/8","Midpoint","Heun's","Ralston's","3rd order Heun","3rd order Ralston","Stability preserving","Forward Euler"]
+    button.id = "Exp"
+    for (let i = 0; i < expmethod.length; i++) {
+      button.onclick = function() {TableauDef(expmethod[i])}
+      button.innerHTML = fullexpmethod[i]
+      cell.appendChild(button)
+      row.appendChild(cell)
+    }
   }
   methodtable.appendChild(row)
 }

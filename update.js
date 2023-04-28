@@ -26,20 +26,11 @@ function ChangeMethod() {
     if (isAdaptive == true) {
         document.getElementById("stepsizedisp").innerHTML = "Target: "
         document.getElementById("stepsdisp").innerHTML = "Threshold: "
-        if (isImplicit == true) {
-            Tab("defbutton","AdpImp")
-        } else {
-            Tab("defbutton","Adp")
-        }
     } else {
         document.getElementById("stepsizedisp").innerHTML = "Stepsize: "
         document.getElementById("stepsdisp").innerHTML = "Steps: "
-        if (isImplicit == true) {
-            Tab("defbutton","Imp")
-        } else {
-            Tab("defbutton","Exp")
-        }
     }
+    CreateMethodTable()
 }
 
 function Tab(name,id) {
