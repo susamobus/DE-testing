@@ -165,17 +165,6 @@ body {
     width: 150px
 }
 
-.maindefbutton {
-    font-size: 8px;
-    color: black;
-    background-color: lightslategrey;
-    padding: 1px;
-    border: 1px solid black;
-    height: 30px;
-    width: 60px;
-    margin: 2px;
-}
-
 .defbutton {
     font-size: 8px;
     color: black;

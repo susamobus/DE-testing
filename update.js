@@ -19,33 +19,28 @@ window.setInterval(function(){
     document.getElementById("result").innerHTML = results
 },75)
 
-let AdaptiveInput = document.getElementById("AdaptiveInput");
-AdaptiveInput.addEventListener("click", () => {
-    isAdaptive = AdaptiveInput.checked;
+function ChangeMethod() {
+    DeleteTableau()
+    isAdaptive = document.getElementById("AdaptiveInput").checked;
+    isImplicit = document.getElementById("ImplicitInput").checked
     if (isAdaptive == true) {
         document.getElementById("stepsizedisp").innerHTML = "Target: "
         document.getElementById("stepsdisp").innerHTML = "Threshold: "
-        ToggleMethods("Adp")
+        Tab("defbutton","Adp")
     } else {
         document.getElementById("stepsizedisp").innerHTML = "Stepsize: "
         document.getElementById("stepsdisp").innerHTML = "Steps: "
-        ToggleMethods("Exp")
+        Tab("defbutton","Exp")
     }
-});
-
-let ImplicitInput = document.getElementById("ImplicitInput");
-ImplicitInput.addEventListener("click", () => {
-    isImplicit = ImplicitInput.checked
     if (isImplicit == true) {
-        ToggleMethods("Imp")
+        Tab("defbutton","Imp")
     } else {
-        ToggleMethods("Exp")
+        Tab("defbutton","Exp")
     }
-});
+}
 
-function ToggleMethods(id) {
-    DeleteTableau()
-    var tabs = document.getElementsByClassName("defbutton") 
+function Tab(name, id) {
+    var tabs = document.getElementsByClassName(name) 
     for (let i = 0; i < tabs.length; i++) {
         if (tabs[i].id == id) {
             tabs[i].style.display = "block"
