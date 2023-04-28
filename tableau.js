@@ -138,18 +138,17 @@ function ChangeTableau(a,b,c,b2) {
 function CreateMethodTable() {
   let methodtable = document.getElementById("table");
   let row = document.createElement("tr");
-  let cell = document.createElement("td");
-  let button = document.createElement("button");
-  button.className = "defbutton";
-
   if (isAdaptive == true) {
     if (isImplicit == true) {
       //
     } else {
       let adpmethod = ["RKF"]
       let fulladpmethod = ["Runge-Kutta-Fehlberg"]
-      button.id = "Adp"
       for (let i = 0; i < adpmethod.length; i++) {
+        let cell = document.createElement("td")
+        let button = document.createElement("button")
+        button.id = "Adp"
+        button.className = "defbutton"
         button.onclick = function() {TableauDef(adpmethod[i])}
         button.innerHTML = fulladpmethod[i]
         cell.appendChild(button)
@@ -159,8 +158,11 @@ function CreateMethodTable() {
   } else if (isImplicit == true) {
     let impmethod = ["BE","IM","CN","KS","QZ"]
     let fullimpmethod = ["Backward Euler","Implicit Midpoint","Crank-Nicolson","Kraaijevanger-Spijker","Qin-Zhang"]
-    button.id = "Imp"
     for (let i = 0; i < impmethod.length; i++) {
+      let cell = document.createElement("td")
+      let button = document.createElement("button")
+      button.id = "Imp"
+      button.className = "defbutton"
       button.onclick = function() {TableauDef(impmethod[i])}
       button.innerHTML = fullimpmethod[i]
       cell.appendChild(button)
@@ -169,8 +171,11 @@ function CreateMethodTable() {
   } else {
     let expmethod = ["RK4","RK3","3/8","MP","HM","RM","HM3","RM3","SP","FE"]
     let fullexpmethod = ["RK4","RK3","3/8","Midpoint","Heun's","Ralston's","3rd order Heun","3rd order Ralston","Stability preserving","Forward Euler"]
-    button.id = "Exp"
     for (let i = 0; i < expmethod.length; i++) {
+      let cell = document.createElement("td")
+      let button = document.createElement("button")
+      button.id = "Exp"
+      button.className = "defbutton"
       button.onclick = function() {TableauDef(expmethod[i])}
       button.innerHTML = fullexpmethod[i]
       cell.appendChild(button)
