@@ -64,7 +64,7 @@ body {
     border-spacing: 0px;
     background-color: lightgray;
     border: 1px solid black;
-    margin: 0px auto;
+    margin: 1px auto;
 }
 
 .table {
@@ -173,4 +173,5 @@ body {
     border: 1px solid black;
     height: 30px;
     width: 60px;
+    margin: 1px;
 }
