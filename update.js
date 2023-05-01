@@ -19,6 +19,21 @@ window.setInterval(function(){
     document.getElementById("result").innerHTML = results
 },75)
 
+function SetDisplay() {
+    let display = document.getElementById("display")
+    if (isAdaptive == true) {
+        if (isImplicit == true) {
+
+        } else {}
+    } else {
+        if (isImplicit == true) {
+
+        } else {
+            display.innerHTML = "$$ \begin{split} y_{n+1}=y_n + h \sum_{i=1}^s b_i k_i \\ k_i = f(x_n + c_i h , y_n + h \sum_{j=1}^{i-1} a_{ij} k_j) \end{split} $$"
+        }
+    }
+}
+
 function ChangeMethod() {
     DeleteTable("tableau")
     DeleteTable("table")
@@ -32,6 +47,7 @@ function ChangeMethod() {
         document.getElementById("stepsdisp").innerHTML = "Steps: "
     }
     CreateMethodTable()
+    SetDisplay()
 }
 
 function Tab(name,id) {
@@ -61,3 +77,7 @@ function Calculate() {
     RK()
 }
   
+function Load() {
+    CreateMethodTable()
+    SetDisplay()
+}
