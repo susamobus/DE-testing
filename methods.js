@@ -3,7 +3,7 @@ function CreateMethodTable() {
     let row = document.createElement("tr");
     if (isAdaptive == true) {
       if (isImplicit == true) {
-        let adpimpmethod = []
+        let adpimpmethod = ["Trapezoidal rule"]
         for (let i = 0; i < adpimpmethod.length; i++) {
           let cell = document.createElement("td")
           let button = document.createElement("button")
@@ -15,7 +15,7 @@ function CreateMethodTable() {
           row.appendChild(cell)
         }
       } else {
-        let adpmethod = ["Runge-Kutta-Fehlberg","Heun-Euler","Bogacki-Shampine"]
+        let adpmethod = ["Runge-Kutta-Fehlberg","Heun-Euler","Bogacki-Shampine","Cash-Karp","Dormand-Prince"]
         for (let i = 0; i < adpmethod.length; i++) {
           let cell = document.createElement("td")
           let button = document.createElement("button")
@@ -171,6 +171,27 @@ function TableauDef(def) {
         defb = ["2/9","1/3","4/9",0];
         defc = [0,"1/2","3/4",1];
         defb2 = ["7/24","1/4","1/3","1/8"];
+      break;
+    case "A3": 
+        s = 6;
+        defa = [0,["1/5"],["3/40","9/40"],["3/10","-9/10","6/5"],["-11/54","5/2","-70/27","35/27"],["1631/55296","175/512","575/13824","44275/110592","253/4096"]];
+        defb = ["37/278",0,"250/621","125/594",0,"512/1771"];
+        defc = [0,"1/5","3/10","3/5",1,"7/8"];
+        defb2 = ["2825/27648",0,"18575/48384","13525/55296","277/14336","1/4"];
+      break;
+    case "A4":
+        s = 7;
+        defa = [0,["1/5"],["3/40","9/40"],["44/45","-56/15","32/9"],["19372/6561","-25360/2187","64448/6561","-212/729"],["9017/3168","-355/33","46732/5247","49/176","-5103/18656"],["35/384",0,"500/1113","125/192","-2187/6784","11/84"]];
+        defb = ["35/384",0,"500/1113","125/192","-2187/6784","11/84",0];
+        defc = [0,"1/5","3/10","4/5","8/9",1,1];
+        defb2 = ["5179/57600",0,"7571/16695","393/640","-92097/339200","187/2100","1/40"];
+      break;
+    case "AI0":
+        s = 2;
+        defa = [[0,0],["1/2","1/2"]];
+        defb = ["1/2","1/2"];
+        defc = [0,1];
+        defb2 = [1,0];
       break;
     default:
     break;
