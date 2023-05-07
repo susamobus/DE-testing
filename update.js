@@ -25,7 +25,7 @@ function SetDisplay() {
         if (isImplicit == true) {
 
         } else {
-            display.innerHTML = "\\begin{align*} y_{n+1}=y_n + h \\sum_{i=1}^s b_i k_i \\\\ y_{n+1}^{*} = y_n + h \\sum_{i=1}^s b_i^{*} k_1 \\\\ k_i = f(x_n + c_i h , y_n + h \\sum_{j=1}^{i-1} a_{ij} k_j) \\\\ h \\rightarrow 0.9 h \\min (\\max ((\\frac{t}{2 | y - y^{*} |})^0.5,0.3),2) \\end{align*}"
+            display.innerHTML = "\\begin{align*} y_{n+1}=y_n + h \\sum_{i=1}^s b_i k_i \\\\ y_{n+1}^{*} = y_n + h \\sum_{i=1}^s b_i^{*} k_1 \\\\ k_i = f(x_n + c_i h , y_n + h \\sum_{j=1}^{i-1} a_{ij} k_j) \\\\ h \\rightarrow 0.9 \\times h min (max (\\sqrt{\\frac{t}{2 | y_n - y_n^{*} |}},0.3),2) \\end{align*}"
         }
     } else {
         if (isImplicit == true) {
