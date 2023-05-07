@@ -38,7 +38,7 @@ function NonAdaptiveRK(x,y,h,n) {
             for (let l = 0; l < lm; l++) {
                 sum += a[j][l] * k[l]
             }
-            k[j] = evaluateFunction(FunctionInput, x + c[j] * h, y + h * sum)
+            k[j] = EvaluateFunction(FunctionInput, x + c[j] * h, y + h * sum)
             sum2 += b[j] * k[j]
         }
         y += h * sum2;
