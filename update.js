@@ -19,6 +19,10 @@ window.setInterval(function(){
     document.getElementById("result").innerHTML = results
 },75)
 
+window.setInterval(function() {
+    ChangeFunction()
+},250)
+
 function SetDisplay() {
     let display = document.getElementById("display")
     if (isAdaptive == true) {

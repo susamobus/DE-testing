@@ -87,7 +87,9 @@ function EvaluateFunction(input,x,y) {
     input = input.replace(/\\cos{(.*?)}/g, "Math.cos($1)");
     input = input.replace(/\\tan{(.*?)}/g, "Math.tan($1)");
     input = input.replace(/\\ln{(.*?)}/g, "Math.log($1)");
-  
+    input = input.replace(/\|(.*?)\|/g, "Math.abs($1)");
+
+
     // Remove brackets and add multiplication symbols
     input = input.replace(/\((.*?)\)/g, "$1");
     input = input.replace(/([a-zA-Z0-9])(\()/g, "$1*$2");
@@ -95,7 +97,7 @@ function EvaluateFunction(input,x,y) {
     input = input.replace(/(.*?)\\times(.*?)/g, "$1*$2");
     input = input.replace(/(.*?)\\cdot(.*?)/g, "$1*$2");
     input = input.replace(/(.*?)\^(.*?)/g, "$1**$2");
-    
+
     input = input.replace(/x/g, x)
     input = input.replace(/y/g, y)
     // Return the resulting JavaScript expression
