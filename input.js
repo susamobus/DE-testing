@@ -102,6 +102,6 @@ function EvaluateFunction(input,x,y) {
 function DisplayFunction(input) {
   input = input.replace(/\\\\/g, "\\");
   input = input.replace(/\(/g, "\\left\(")
-  input = input.replace(/\)/g, "\\right\(")
+  input = input.replace(/\)/g, "\\right\)")
   return input;
 }
