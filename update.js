@@ -37,6 +37,13 @@ function SetDisplay() {
     MathJax.typeset([display])
 }
 
+function ChangeFunction() {
+    let functiondisplay = document.getElementById("functiondisplay")
+    functiondisplay.innerHTML = "$$" + document.getElementById("FunctionInput").value + "$$"
+    FunctionInput = document.getElementById("FunctionInput").value
+    MathJax.typeset([functiondisplay])
+}
+
 function ChangeMethod() {
     DeleteTable("tableau")
     DeleteTable("table")
@@ -65,7 +72,6 @@ function Tab(name,id) {
 }
 
 function Calculate() {
-    FunctionInput = document.getElementById("FunctionInput").value
     s = Number(document.getElementById("stage").value)
     if (isAdaptive == true) {
         acc = Number(document.getElementById("stepsize").value)

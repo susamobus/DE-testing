@@ -16,7 +16,7 @@
         <span class="MainTitle" style="font-size: 40px">Initial Value Problem Solver</span>
         <br><br>
         <span style="font-size: 20px">dy/dx = </span>
-        <input type="text" id="FunctionInput" class="MainInput">
+        <input type="text" id="FunctionInput" class="MainInput" onchange="ChangeFunction()">
         <br>
         <table class="InputTable">
             <tr>
@@ -52,7 +52,9 @@
         <input type="number" id="stage" name="stage" class="Input" maxlength="2">
         <button onclick="CreateTableau()" class="confirmbutton">Create Tableau</button>
         <br><br><br>
-        <span id="display">\begin{align*} y_{n+1}=y_n + h \sum_{i=1}^s b_i k_i \\ k_i = f(x_n + c_i h , y_n + h \sum_{j=1}^{i-1} a_{ij} k_j) \end{align*}</span>
+        <span id="functiondisplay"></span>
+        <br>
+        <span id="display"></span>
         <br><br><br>
         <button onclick="Calculate()" class="mainbutton">Calculate</button><br><br>
         <span class="Result">Result: <span id="result">loading</span></span>

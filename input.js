@@ -8,15 +8,15 @@ function Fraction(input) {
     return numerator / denominator
   }
   
-
+/*
   function evaluateFunction(input, x, y) {
     // Replace pi and e with their corresponding values
     input = input.replace(/pi/g, Math.PI).replace(/e/g, Math.E);
-  
+*/
     // Define regular expression to match valid operators and functions
-    const operatorRegex = /[+\-*/^()]/;
-    const functionRegex = /(sin|cos|tan|sqrt)/;
-  
+//    const operatorRegex = /[+\-*/^()]/;
+//    const functionRegex = /(sin|cos|tan|sqrt)/;
+/* 
     // Split input into individual tokens
     const tokens = input.split(/(\s+|\d+\.\d*|\d+|\w+|\(|\))/).filter(token => token.trim() !== '');
   
@@ -76,3 +76,26 @@ function Fraction(input) {
   
     return result;
   }
+*/
+
+function EvaluateFunction(input,x,y) {
+    // Replace LaTeX commands with JavaScript equivalents
+    let input = input.replace(/\\sqrt{(.*?)}/g, "Math.sqrt($1)");
+    input = input.replace(/\\frac{(.*?)}{(.*?)}/g, "($1)/($2)");
+    input = input.replace(/\\pi/g, "Math.PI");
+    input = input.replace(/\\sin{(.*?)}/g, "Math.sin($1)");
+    input = input.replace(/\\cos{(.*?)}/g, "Math.cos($1)");
+    input = input.replace(/\\tan{(.*?)}/g, "Math.tan($1)");
+    input = input.replace(/\\ln{(.*?)}/g, "Math.log($1)");
+  
+    // Remove brackets and add multiplication symbols
+    input = input.replace(/\((.*?)\)/g, "$1");
+    input = input.replace(/([a-zA-Z0-9])(\()/g, "$1*$2");
+    input = input.replace(/(\))([a-zA-Z0-9])/g, "$1*$2");
+
+    input = input.replace(/x/g, x)
+    input = input.replace(/y/g, y)
+    // Return the resulting JavaScript expression
+    return eval(input);
+  }
+  

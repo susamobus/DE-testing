@@ -64,7 +64,7 @@ function AdaptiveRK(x,y,y2) {
             for (let l = 0; l < lm; l++) {
                 sum += a[j][l] * k[l]
             }
-            k[j] = evaluateFunction(FunctionInput, x + c[j] * h, y + h * sum)
+            k[j] = EvaluateFunction(FunctionInput, x + c[j] * h, y + h * sum)
             sum3 += b2[j] * k[j]
             sum2 += b[j] * k[j]
         }
