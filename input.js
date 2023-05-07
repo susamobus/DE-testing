@@ -80,7 +80,7 @@ function Fraction(input) {
 
 function EvaluateFunction(input,x,y) {
     // Replace LaTeX commands with JavaScript equivalents
-    let input = input.replace(/\\sqrt{(.*?)}/g, "Math.sqrt($1)");
+    input = input.replace(/\\sqrt{(.*?)}/g, "Math.sqrt($1)");
     input = input.replace(/\\frac{(.*?)}{(.*?)}/g, "($1)/($2)");
     input = input.replace(/\\pi/g, "Math.PI");
     input = input.replace(/\\sin{(.*?)}/g, "Math.sin($1)");
@@ -99,3 +99,9 @@ function EvaluateFunction(input,x,y) {
     return eval(input);
   }
   
+function DisplayFunction(input) {
+  input = input.replace(/\\\\/g, "\\");
+  input = input.replace(/\(/g, "\\left\(")
+  input = input.replace(/\)/g, "\\right\(")
+  return input;
+}

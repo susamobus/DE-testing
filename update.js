@@ -39,7 +39,7 @@ function SetDisplay() {
 
 function ChangeFunction() {
     let functiondisplay = document.getElementById("functiondisplay")
-    functiondisplay.innerHTML = "$$" + document.getElementById("FunctionInput").value + "$$"
+    functiondisplay.innerHTML = "$$ \\frac{dy}{dx} = " + DisplayFunction(document.getElementById("FunctionInput").value) + "$$"
     FunctionInput = document.getElementById("FunctionInput").value
     MathJax.typeset([functiondisplay])
 }
