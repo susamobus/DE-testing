@@ -37,6 +37,12 @@ function CreateTableau() {
                 input.disabled = true
               }
               cell.appendChild(input)
+            } else {
+              let input = document.createElement("input");
+              input.className = "TableInput";
+              input.id = "TableInputA";
+              input.disabled = true;
+              cell.appendChild(input)
             }
             row.appendChild(cell);
           }
