@@ -92,7 +92,10 @@ function EvaluateFunction(input,x,y) {
     input = input.replace(/\((.*?)\)/g, "$1");
     input = input.replace(/([a-zA-Z0-9])(\()/g, "$1*$2");
     input = input.replace(/(\))([a-zA-Z0-9])/g, "$1*$2");
-
+    input = input.replace(/(.*?)\\times(.*?)/g, "$1*$2");
+    input = input.replace(/(.*?)\\cdot(.*?)/g, "$1*$2");
+    input = input.replace(/(.*?)\^(.*?)/g, "$1**$2");
+    
     input = input.replace(/x/g, x)
     input = input.replace(/y/g, y)
     // Return the resulting JavaScript expression
@@ -100,7 +103,6 @@ function EvaluateFunction(input,x,y) {
   }
   
 function DisplayFunction(input) {
-  input = input.replace(/\\\\/g, "\\");
   input = input.replace(/\(/g, "\\left\(")
   input = input.replace(/\)/g, "\\right\)")
   return input;
