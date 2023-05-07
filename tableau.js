@@ -11,7 +11,7 @@ function CreateTableau() {
           if (isImplicit == true) {
             im = s+1
           }
-          for (let j = 0; j < im; j++) {
+          for (let j = 0; j < s+1; j++) {
             let cell = document.createElement("td");
             if (i == 1 && j == 0 && isImplicit == false) {
               let input = document.createElement("input");
@@ -28,10 +28,13 @@ function CreateTableau() {
                 input.id = "TableInputC";
                 input.name = "c" + i;
                 input.placeholder = "c" + i;
-              } else {
+              } else if (j >= i || isimplicit == true) {
                 input.id = "TableInputA";
                 input.name = "a" + i + "," + j;
                 input.placeholder = "a" + i + "," + j;
+              } else {
+                input.id = "TableInputA"
+                input.disabled = true
               }
               cell.appendChild(input)
             }
