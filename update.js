@@ -29,9 +29,10 @@ function SetDisplay() {
         if (isImplicit == true) {
 
         } else {
-            //display.innerHTML = "$$ y_{n+1}=y_n + h \sum_{i=1}^s b_i k_i k_i = f(x_n + c_i h , y_n + h \sum_{j=1}^{i-1} a_{ij} k_j)$$"
+            display.innerHTML = "\\begin{align*} y_{n+1}=y_n + h \\sum_{i=1}^s b_i k_i \\ k_i = f(x_n + c_i h , y_n + h \\sum_{j=1}^{i-1} a_{ij} k_j) \\end{align*}"
         }
     }
+    MathJax.typeset(display)
 }
 
 function ChangeMethod() {
