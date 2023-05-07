@@ -77,7 +77,7 @@ body {
 }
 
 .TableInput {
-    width: 60px;
+    width: 70px;
     height: 15px;
     background-color: lightgray;
     border: none;
@@ -112,7 +112,7 @@ body {
 }
 
 #TableInputC{
-    width: 60px;
+    width: 70px;
     height: 15px;
     background-color: lightgray;
     border-bottom: none;
@@ -126,7 +126,7 @@ body {
 }
 
 #TableInputB {
-    width: 60px;
+    width: 70px;
     height: 15px;
     background-color: lightgray;
     border-bottom: none;
