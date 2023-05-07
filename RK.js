@@ -30,14 +30,7 @@ function RK() {
         y += h * sum2;
         y2 += h * sum3
         x += h;
-        if (y-y2 > acc) {
-            // Decrease h
-            h /= (y-y2)
-        } else {
-            // Increase h
-            h *= (y-y2)
-        }
-        // y? y2? Average?
+        h = UpdateStepsize(y,y2)
         results = y
     } else {
     if (isImplicit == true) {
@@ -64,3 +57,12 @@ function RK() {
 }
 }
   
+function UpdateStepsize(y,y2) {
+    let stepsize2 = Math.sqrt(acc/(2*Math.abs(y-y2)))
+    if (stepsize2 < 0.3) {
+        stepsize2 = 0.3
+    } else if (stepsize2 > 2) {
+        stepsize2 = 2
+    }
+    return 0.9*h*stepsize2
+}

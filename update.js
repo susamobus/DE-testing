@@ -41,7 +41,7 @@ function ChangeMethod() {
     isImplicit = document.getElementById("ImplicitInput").checked;
     if (isAdaptive == true) {
         document.getElementById("stepsizedisp").innerHTML = "Target: "
-        document.getElementById("stepsdisp").innerHTML = "Threshold: "
+        document.getElementById("stepsdisp").innerHTML = "Tolerance: "
     } else {
         document.getElementById("stepsizedisp").innerHTML = "Stepsize: "
         document.getElementById("stepsdisp").innerHTML = "Steps: "
