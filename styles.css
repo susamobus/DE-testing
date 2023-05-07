@@ -70,17 +70,18 @@ body {
 .table {
     border-collapse: collapse;
     border-spacing: 0px;
+    background-color: lightgray;
     border: 1px solid black;
     padding: 0px;
     margin: 1px auto;
 }
 
 .TableInput {
-    width: 80px;
-    height: 20px;
+    width: 60px;
+    height: 15px;
     border: none;
     border-radius: 0px;
-    font-size: 10px;
+    font-size: 8px;
     padding: 0px;
     margin: 1px;
 }
@@ -110,27 +111,27 @@ body {
 }
 
 #TableInputC{
-    width: 80px;
-    height: 20px;
+    width: 60px;
+    height: 15px;
     border-bottom: none;
     border-top: none;
     border-left: none;
     border-right: 1px solid black;
     border-radius: 0px;
-    font-size: 10px;
+    font-size: 8px;
     margin: 1px;
     padding: 0px;
 }
 
 #TableInputB {
-    width: 80px;
-    height: 20px;
+    width: 60px;
+    height: 15px;
     border-bottom: none;
     border-right: none;
     border-left: none;
     border-top: 1px solid black;
     border-radius: 0px;
-    font-size: 10px;
+    font-size: 8px;
     margin: 1px;
     padding: 0px;
 }
