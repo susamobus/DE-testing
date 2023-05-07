@@ -28,7 +28,7 @@ function CreateTableau() {
                 input.id = "TableInputC";
                 input.name = "c" + i;
                 input.placeholder = "c" + i;
-              } else if (j >= i || isimplicit == true) {
+              } else if (j < i || isimplicit == true) {
                 input.id = "TableInputA";
                 input.name = "a" + i + "," + j;
                 input.placeholder = "a" + i + "," + j;
