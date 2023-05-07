@@ -28,20 +28,20 @@ function CreateTableau() {
                 input.id = "TableInputC";
                 input.name = "c" + i;
                 input.placeholder = "c" + i;
-              } else if (j < i || isimplicit == true) {
+              } else if (j < i || isImplicit == true) {
                 input.id = "TableInputA";
                 input.name = "a" + i + "," + j;
                 input.placeholder = "a" + i + "," + j;
               } else {
-                input.id = "TableInputA"
-                input.disabled = true
+                input.id = "TableInputA";
+                input.disabled = "true";
               }
               cell.appendChild(input)
             } else {
               let input = document.createElement("input");
               input.className = "TableInput";
               input.id = "TableInputA";
-              input.disabled = true;
+              input.disabled = "true";
               cell.appendChild(input)
             }
             row.appendChild(cell);
